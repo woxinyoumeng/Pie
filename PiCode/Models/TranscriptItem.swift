@@ -17,11 +17,11 @@ enum ToolStatus: Equatable {
 
     var label: String {
         switch self {
-        case .pending: return "Queued"
-        case .running: return "Running"
-        case .success: return "Done"
-        case .failure: return "Failed"
-        case .cancelled: return "Cancelled"
+        case .pending: return L("Queued")
+        case .running: return L("Running")
+        case .success: return L("Done")
+        case .failure: return L("Failed")
+        case .cancelled: return L("Cancelled")
         }
     }
 
@@ -48,8 +48,8 @@ enum SummaryKind: String, Equatable {
 
     var label: String {
         switch self {
-        case .compaction: return "Compact context"
-        case .branch: return "Branch summary"
+        case .compaction: return L("Compact context")
+        case .branch: return L("Branch summary")
         }
     }
 
@@ -71,10 +71,10 @@ struct FileChange: Identifiable, Equatable, Hashable {
 
         var label: String {
             switch self {
-            case .created: return "created"
-            case .modified: return "modified"
-            case .deleted: return "deleted"
-            case .read: return "read"
+            case .created: return L("created")
+            case .modified: return L("modified")
+            case .deleted: return L("deleted")
+            case .read: return L("read")
             }
         }
 

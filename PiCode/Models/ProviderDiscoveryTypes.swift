@@ -21,13 +21,13 @@ enum ProviderDiscoveryError: LocalizedError {
     var errorDescription: String? {
         switch self {
         case .invalidEndpoint:
-            return "Enter a valid HTTP or HTTPS endpoint."
+            return L("Enter a valid HTTP or HTTPS endpoint.")
         case .unsupportedAPI(let api):
             return "\(api) does not expose a model-list endpoint. Add its model IDs manually."
         case .unavailable(let detail):
             return detail
         case .noModels:
-            return "The endpoint responded, but did not return any models."
+            return L("The endpoint responded, but did not return any models.")
         }
     }
 }

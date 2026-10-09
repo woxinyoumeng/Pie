@@ -27,11 +27,11 @@ struct ExtensionDialog: Identifiable, Equatable {
 
     var defaultTitle: String {
         switch request.method {
-        case .select: return "Choose an option"
-        case .confirm: return "Confirm"
-        case .input: return "Enter a value"
-        case .editor: return "Edit text"
-        default: return "Extension request"
+        case .select: return L("Choose an option")
+        case .confirm: return L("Confirm")
+        case .input: return L("Enter a value")
+        case .editor: return L("Edit text")
+        default: return L("Extension request")
         }
     }
 

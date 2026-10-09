@@ -204,9 +204,9 @@ struct ComposerView: View {
     }
 
     private var placeholder: String {
-        if !controller.connection.isConnected { return "Pi is not running…" }
-        if controller.runtime.isBusy { return "Steer Pi, or queue a follow-up…" }
-        return "Do anything"
+        if !controller.connection.isConnected { return L("Pi is not running…") }
+        if controller.runtime.isBusy { return L("Steer Pi, or queue a follow-up…") }
+        return L("Do anything")
     }
 
     private var attachmentRow: some View {

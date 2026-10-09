@@ -18,12 +18,12 @@ enum RPCFrameDecoderError: LocalizedError {
 
     var errorDescription: String? {
         switch self {
-        case .invalidMetadata: return "OMP sent invalid RPC chunk metadata."
-        case .invalidPayload: return "OMP sent an invalid RPC chunk payload."
-        case .interrupted: return "OMP interrupted a chunked RPC response."
-        case .sequenceMismatch: return "OMP sent RPC response chunks out of sequence."
-        case .lengthMismatch: return "OMP's chunked RPC response length did not match its metadata."
-        case .invalidJSON: return "OMP's reassembled RPC response was not valid JSON."
+        case .invalidMetadata: return L("OMP sent invalid RPC chunk metadata.")
+        case .invalidPayload: return L("OMP sent an invalid RPC chunk payload.")
+        case .interrupted: return L("OMP interrupted a chunked RPC response.")
+        case .sequenceMismatch: return L("OMP sent RPC response chunks out of sequence.")
+        case .lengthMismatch: return L("OMP's chunked RPC response length did not match its metadata.")
+        case .invalidJSON: return L("OMP's reassembled RPC response was not valid JSON.")
         }
     }
 }

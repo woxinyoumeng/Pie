@@ -27,6 +27,9 @@ struct PiCodeApp: App {
             RootView(state: state)
                 .frame(minWidth: 900, minHeight: 560)
                 .preferredColorScheme(state.preferences.appearance.colorScheme)
+                // 界面语言:设置里选择后立即生效,`Text` 等字面量由 SwiftUI 按
+                // 这个 locale 查 `*.lproj`,`String` 上下文走 `L(_:)`。
+                .environment(\.locale, state.preferences.appLanguage.locale ?? .autoupdatingCurrent)
         }
         // The content column draws its own header, so the window draws no title
         // bar or toolbar above it: the content runs to the top of the window and

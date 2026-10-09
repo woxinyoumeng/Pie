@@ -29,9 +29,9 @@ final class PreferencesStore {
         }
         var label: String {
             switch self {
-            case .system: return "System"
-            case .light: return "Light"
-            case .dark: return "Dark"
+            case .system: return L("System")
+            case .light: return L("Light")
+            case .dark: return L("Dark")
             }
         }
     }
@@ -43,14 +43,71 @@ final class PreferencesStore {
         var id: String { rawValue }
         var label: String {
             switch self {
-            case .returnKey: return "Return sends, Shift-Return adds a line"
-            case .commandReturn: return "Command-Return sends, Return adds a line"
+            case .returnKey: return L("Return sends, Shift-Return adds a line")
+            case .commandReturn: return L("Command-Return sends, Return adds a line")
             }
         }
     }
 
+    /// 界面语言。`system` 跟随 macOS,其余为强制覆盖。
+    ///
+    /// 语言名一律用各自的母语书写 —— 选择器在任何界面语言下都读得懂。
+    enum AppLanguage: String, CaseIterable, Identifiable {
+        case system
+        case english = "en"
+        case chinese = "zh-Hans"
+
+        var id: String { rawValue }
+
+        /// `UserDefaults` 键,与 `Keys.appLanguage` 同源,避免两处字面量漂移。
+        static var defaultsKey: String { Keys.appLanguage }
+
+        /// 读取当前选择。`L(_:)` 每次查找都经过这里,所以切换语言后无需重启。
+        static var current: AppLanguage {
+            let stored = UserDefaults.standard.string(forKey: defaultsKey) ?? ""
+            return AppLanguage(rawValue: stored) ?? .system
+        }
+
+        /// 供 `.environment(\.locale, …)` 使用;`nil` 表示跟随系统。
+        var locale: Locale? {
+            switch self {
+            case .system: return nil
+            case .english: return Locale(identifier: Self.englishIdentifier)
+            case .chinese: return Locale(identifier: Self.chineseIdentifier)
+            }
+        }
+
+        /// 实际用于查找 `*.lproj` 的语言代码。英文是开发语言,没有 `en.lproj`,
+        /// 因此这个解析结果会让 `L(_:)` 直接回退到源字符串。
+        var resolvedIdentifier: String {
+            switch self {
+            case .system: return Self.systemResolvedIdentifier
+            case .english: return Self.englishIdentifier
+            case .chinese: return Self.chineseIdentifier
+            }
+        }
+
+        /// 系统首选语言里只有中文落入本应用的翻译范围,其余一律回退英文。
+        private static var systemResolvedIdentifier: String {
+            let preferred = Locale.preferredLanguages.first ?? englishIdentifier
+            return preferred.hasPrefix("zh") ? chineseIdentifier : englishIdentifier
+        }
+
+        var label: String {
+            switch self {
+            case .system: return L("Follow System")
+            case .english: return "English"
+            case .chinese: return "简体中文"
+            }
+        }
+
+        private static let englishIdentifier = "en"
+        private static let chineseIdentifier = "zh-Hans"
+    }
+
     var appearance: Appearance
     var sendKey: SendKey
+    var appLanguage: AppLanguage
     var showInspector: Bool
     var showSidebar: Bool
     /// Whether the embedded terminal panel is open under the conversation.
@@ -90,6 +147,7 @@ final class PreferencesStore {
         self.defaults = defaults
         appearance = Appearance(rawValue: defaults.string(forKey: Keys.appearance) ?? "") ?? .system
         sendKey = SendKey(rawValue: defaults.string(forKey: Keys.sendKey) ?? "") ?? .returnKey
+        appLanguage = AppLanguage(rawValue: defaults.string(forKey: Keys.appLanguage) ?? "") ?? .system
         showInspector = defaults.object(forKey: Keys.showInspector) as? Bool ?? true
         showSidebar = defaults.object(forKey: Keys.showSidebar) as? Bool ?? true
         showTerminal = defaults.object(forKey: Keys.showTerminal) as? Bool ?? false
@@ -122,6 +180,7 @@ final class PreferencesStore {
     func persist() {
         defaults.set(appearance.rawValue, forKey: Keys.appearance)
         defaults.set(sendKey.rawValue, forKey: Keys.sendKey)
+        defaults.set(appLanguage.rawValue, forKey: Keys.appLanguage)
         defaults.set(showInspector, forKey: Keys.showInspector)
         defaults.set(showSidebar, forKey: Keys.showSidebar)
         defaults.set(showTerminal, forKey: Keys.showTerminal)
@@ -170,6 +229,7 @@ final class PreferencesStore {
     private enum Keys {
         static let appearance = "appearance"
         static let sendKey = "sendKey"
+        static let appLanguage = "appLanguage"
         static let showInspector = "showInspector"
         static let showSidebar = "showSidebar"
         static let showTerminal = "showTerminal"

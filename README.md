@@ -2,6 +2,7 @@
 
 # PiCode
 
+[English](README.md) · [简体中文](README.zh-CN.md)
 **A native macOS interface for coding agents — [Pi](https://pi.dev/), Oh My Pi, Claude Code, Codex, OpenCode, and DeepSeek.**
 
 PiCode keeps each agent as the runtime and gives it a focused desktop interface for long-running coding sessions. Projects and chats stay close at hand, agent activity remains readable, and files, diffs, and command output open beside the conversation when you need them.

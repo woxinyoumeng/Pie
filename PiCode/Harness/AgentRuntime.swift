@@ -50,7 +50,7 @@ enum AgentRuntimeError: LocalizedError, Equatable {
     var errorDescription: String? {
         switch self {
         case .notRunning:
-            return "The agent process is not running."
+            return L("The agent process is not running.")
         case .unsupported(let command, let harness):
             return "\(harness) does not support `\(command)`."
         case .failed(let message):

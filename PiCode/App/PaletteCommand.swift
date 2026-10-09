@@ -48,35 +48,35 @@ enum PaletteCommand: String, CaseIterable, Identifiable, Hashable {
 
     var title: String {
         switch self {
-        case .newSession: return "New Session"
-        case .addProject: return "Open Project Folder…"
-        case .refreshSessions: return "Reload Sessions"
-        case .renameSession: return "Rename Session…"
-        case .cloneSession: return "Clone Current Branch"
-        case .forkLatest: return "Fork…"
-        case .compactContext: return "Compact Context"
-        case .compactWithInstructions: return "Compact with Instructions…"
-        case .exportSession: return "Export Session as HTML…"
-        case .deleteSession: return "Delete Session…"
-        case .focusComposer: return "Focus Composer"
-        case .interrupt: return "Interrupt and Restore Queue"
-        case .abortRun: return "Stop the Agent"
-        case .cycleModel: return "Cycle Model"
-        case .cycleThinkingLevel: return "Cycle Thinking Level"
-        case .toggleInspector: return "Toggle Inspector"
-        case .toggleSidebar: return "Toggle Sidebar"
-        case .toggleTerminal: return "Toggle Terminal"
-        case .copyTranscript: return "Copy Transcript"
-        case .copyLastResponse: return "Copy Last Response"
-        case .openInTerminal: return "Open Project in Terminal"
-        case .openInVSCode: return "Open Project in VS Code"
-        case .revealInFinder: return "Reveal Project in Finder"
-        case .revealPiDirectory: return "Reveal Pi's Config Folder"
-        case .openSettings: return "Settings…"
-        case .providersSettings: return "Providers and Credentials…"
-        case .packages: return "Packages"
-        case .showPiSetup: return "Pi Setup Help"
-        case .checkForPiUpdates: return "Check Pi Version"
+        case .newSession: return L("New Session")
+        case .addProject: return L("Open Project Folder…")
+        case .refreshSessions: return L("Reload Sessions")
+        case .renameSession: return L("Rename Session…")
+        case .cloneSession: return L("Clone Current Branch")
+        case .forkLatest: return L("Fork…")
+        case .compactContext: return L("Compact Context")
+        case .compactWithInstructions: return L("Compact with Instructions…")
+        case .exportSession: return L("Export Session as HTML…")
+        case .deleteSession: return L("Delete Session…")
+        case .focusComposer: return L("Focus Composer")
+        case .interrupt: return L("Interrupt and Restore Queue")
+        case .abortRun: return L("Stop the Agent")
+        case .cycleModel: return L("Cycle Model")
+        case .cycleThinkingLevel: return L("Cycle Thinking Level")
+        case .toggleInspector: return L("Toggle Inspector")
+        case .toggleSidebar: return L("Toggle Sidebar")
+        case .toggleTerminal: return L("Toggle Terminal")
+        case .copyTranscript: return L("Copy Transcript")
+        case .copyLastResponse: return L("Copy Last Response")
+        case .openInTerminal: return L("Open Project in Terminal")
+        case .openInVSCode: return L("Open Project in VS Code")
+        case .revealInFinder: return L("Reveal Project in Finder")
+        case .revealPiDirectory: return L("Reveal Pi's Config Folder")
+        case .openSettings: return L("Settings…")
+        case .providersSettings: return L("Providers and Credentials…")
+        case .packages: return L("Packages")
+        case .showPiSetup: return L("Pi Setup Help")
+        case .checkForPiUpdates: return L("Check Pi Version")
         }
     }
 
@@ -184,10 +184,10 @@ enum PaletteCommand: String, CaseIterable, Identifiable, Hashable {
 
         var label: String {
             switch self {
-            case .session: return "Session"
-            case .run: return "Agent"
-            case .view: return "View"
-            case .share: return "Share"
+            case .session: return L("Session")
+            case .run: return L("Agent")
+            case .view: return L("View")
+            case .share: return L("Share")
             case .app: return "PiCode"
             }
         }

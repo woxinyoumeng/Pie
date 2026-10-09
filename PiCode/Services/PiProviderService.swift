@@ -53,10 +53,10 @@ enum PiProviderService {
 
         var kindLabel: String {
             switch kind {
-            case .apiKey: return "API key"
-            case .apiKeyWithEnvironment: return "API key + environment"
-            case .reference: return "Key reference"
-            case .oauth: return "OAuth"
+            case .apiKey: return L("API key")
+            case .apiKeyWithEnvironment: return L("API key + environment")
+            case .reference: return L("Key reference")
+            case .oauth: return L("OAuth")
             }
         }
     }
@@ -83,7 +83,7 @@ enum PiProviderService {
             case .providerMissing(let provider):
                 return "There is no credential for “\(provider)” to remove."
             case .emptyKey:
-                return "The API key was empty."
+                return L("The API key was empty.")
             }
         }
     }
@@ -170,15 +170,15 @@ enum PiProviderService {
                 // "invalid_state" is what a *file* problem looks like.
                 switch reason {
                 case "invalid_state":
-                    return "Pi could not load its credential or model configuration"
+                    return L("Pi could not load its credential or model configuration")
                 case "credentials_not_configured":
-                    return "No credentials configured"
+                    return L("No credentials configured")
                 case "provider_not_found":
-                    return "This Pi does not offer that provider"
+                    return L("This Pi does not offer that provider")
                 case .some(let other):
                     return other.replacingOccurrences(of: "_", with: " ")
                 case nil:
-                    return "Not ready"
+                    return L("Not ready")
                 }
             case .unknown(let status):
                 return status

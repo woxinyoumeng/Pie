@@ -432,7 +432,7 @@ struct ComposerModelPicker: View {
         if query.isEmpty {
             return "\(controller.harness.displayName) did not return any compatible models."
         }
-        return "Try a provider, model name, or qualified model ID."
+        return L("Try a provider, model name, or qualified model ID.")
     }
 
     private func isSelected(_ model: PiModel) -> Bool {

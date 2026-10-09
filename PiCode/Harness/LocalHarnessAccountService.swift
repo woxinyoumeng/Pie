@@ -23,7 +23,7 @@ enum LocalHarnessAccountService {
             return LocalHarnessAccountStatus(
                 kind: .unavailable,
                 title: "Managed by \(descriptor.displayName)",
-                detail: "This harness does not expose a local account-status command."
+                detail: L("This harness does not expose a local account-status command.")
             )
         }
 
@@ -53,7 +53,7 @@ enum LocalHarnessAccountService {
         guard result.exitCode == 0 else {
             return LocalHarnessAccountStatus(
                 kind: .signedOut,
-                title: "Not signed in",
+                title: L("Not signed in"),
                 detail: result.stderr.trimmingCharacters(in: .whitespacesAndNewlines)
                     .nonEmpty ?? "Sign in with \(descriptor.displayName) to use a local subscription."
             )
@@ -75,8 +75,8 @@ enum LocalHarnessAccountService {
             guard loggedIn else {
                 return LocalHarnessAccountStatus(
                     kind: .signedOut,
-                    title: "Not signed in",
-                    detail: "Run `claude auth login` and choose your Claude subscription."
+                    title: L("Not signed in"),
+                    detail: L("Run `claude auth login` and choose your Claude subscription.")
                 )
             }
             let usesSubscription = method.localizedCaseInsensitiveContains("oauth")
@@ -103,8 +103,8 @@ enum LocalHarnessAccountService {
 
         default:
             return LocalHarnessAccountStatus(kind: .unavailable,
-                                             title: "Unavailable",
-                                             detail: "Account status is unavailable.")
+                                             title: L("Unavailable"),
+                                             detail: L("Account status is unavailable."))
         }
     }
 

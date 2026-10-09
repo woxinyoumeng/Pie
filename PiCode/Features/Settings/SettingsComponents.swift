@@ -45,10 +45,10 @@ struct SettingsSection<Content: View>: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             if let title {
-                Text(title).font(.system(size: 16, weight: .medium))
+                Text(L(title)).font(.system(size: 16, weight: .medium))
             }
             if let caption {
-                Text(caption)
+                Text(L(caption))
                     .font(.system(size: 13))
                     .foregroundStyle(.secondary)
                     .fixedSize(horizontal: false, vertical: true)
@@ -98,9 +98,9 @@ struct SettingsRow<Trailing: View>: View {
     var body: some View {
         HStack(alignment: .center, spacing: 16) {
             VStack(alignment: .leading, spacing: 4) {
-                Text(title).font(.system(size: 14, weight: .medium))
+                Text(L(title)).font(.system(size: 14, weight: .medium))
                 if let detail {
-                    Text(detail)
+                    Text(L(detail))
                         .font(.system(size: 13))
                         .foregroundStyle(.secondary)
                         .fixedSize(horizontal: false, vertical: true)

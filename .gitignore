@@ -16,3 +16,6 @@ xcuserdata/
 
 # Local scratch
 /tmp/
+
+# 本地化提取产物(可用 Tools/Localization/extract_ui_strings.py 重新生成)
+Tools/Localization/ui-strings.tsv

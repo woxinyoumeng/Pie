@@ -250,8 +250,8 @@ struct SessionView: View {
 
             var caption: String {
                 switch self {
-                case .steer: return "steers this turn"
-                case .followUp: return "runs after this turn"
+                case .steer: return L("steers this turn")
+                case .followUp: return L("runs after this turn")
                 }
             }
         }
@@ -296,7 +296,7 @@ struct SessionView: View {
     private var connectionMessage: String? {
         switch controller.connection {
         case .failed(let message): return message
-        case .disconnected: return "The session transcript is still shown. Restart to continue working in this session."
+        case .disconnected: return L("The session transcript is still shown. Restart to continue working in this session.")
         default: return nil
         }
     }

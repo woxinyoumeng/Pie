@@ -23,7 +23,7 @@ enum PiRPCError: LocalizedError, Equatable {
     var errorDescription: String? {
         switch self {
         case .notRunning:
-            return "The Pi process is not running."
+            return L("The Pi process is not running.")
         case .encodingFailed(let detail):
             return "Could not encode the RPC command: \(detail)"
         case .timeout(let command):

@@ -162,7 +162,7 @@ struct RailButton: View {
         .buttonStyle(.plain)
         .opacity(isEnabled ? 1 : 0.45)
         .onHover { isHovering = $0 }
-        .help(help)
-        .accessibilityLabel(help)
+        .help(L(help))
+        .accessibilityLabel(L(help))
     }
 }

@@ -1,0 +1,5046 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "A literal key is stored with this provider. `$ENV_VAR` or `!command` keeps the secret elsewhere.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "该服务商保存的是明文密钥。若想让密钥留在别处,可改用 `$ENV_VAR` 或 `!command`。"
+          }
+        }
+      }
+    },
+    "API & accounts": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "API 与账号"
+          }
+        }
+      }
+    },
+    "API key": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "API 密钥"
+          }
+        }
+      }
+    },
+    "API key + environment": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "API 密钥 + 环境变量"
+          }
+        }
+      }
+    },
+    "Aborted by you": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已被你中止"
+          }
+        }
+      }
+    },
+    "Accepts images": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "支持图片"
+          }
+        }
+      }
+    },
+    "Account status is unavailable.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "账号状态不可用。"
+          }
+        }
+      }
+    },
+    "Actions": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "操作"
+          }
+        }
+      }
+    },
+    "Activity": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "活动"
+          }
+        }
+      }
+    },
+    "Add Harness": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "添加代理程序"
+          }
+        }
+      }
+    },
+    "Add Harness…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "添加代理程序…"
+          }
+        }
+      }
+    },
+    "Add Provider…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "添加服务商…"
+          }
+        }
+      }
+    },
+    "Add a harness": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "添加代理程序"
+          }
+        }
+      }
+    },
+    "Add a provider": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "添加服务商"
+          }
+        }
+      }
+    },
+    "Add one for an OpenAI- or Anthropic-compatible server, a gateway, or a local runtime.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "可为兼容 OpenAI 或 Anthropic 的服务器、网关或本地运行时添加一项。"
+          }
+        }
+      }
+    },
+    "Added": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已添加"
+          }
+        }
+      }
+    },
+    "Agent": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "代理"
+          }
+        }
+      }
+    },
+    "Agent finished": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "代理已完成"
+          }
+        }
+      }
+    },
+    "Agent runtime": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "代理运行时"
+          }
+        }
+      }
+    },
+    "Agent runtime new chats in this project use.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此项目的新对话所使用的代理运行时。"
+          }
+        }
+      }
+    },
+    "Agent started": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "代理已启动"
+          }
+        }
+      }
+    },
+    "All": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "全部"
+          }
+        }
+      }
+    },
+    "Any of these put `pi` on your PATH.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "以下任一命令都会把 `pi` 放进 PATH。"
+          }
+        }
+      }
+    },
+    "Appearance": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "外观"
+          }
+        }
+      }
+    },
+    "Appended to every `pi --mode rpc` launch. PiCode never writes to Pi's settings files.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "追加到每次 `pi --mode rpc` 启动。PiCode 永不写入 Pi 的设置文件。"
+          }
+        }
+      }
+    },
+    "Appended to the agent's system prompt for new sessions in this project.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "追加到此项目新会话的代理系统提示词。"
+          }
+        }
+      }
+    },
+    "Applies to the interface immediately; nothing restarts.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "立即应用于界面,无需重启。"
+          }
+        }
+      }
+    },
+    "Arguments": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "参数"
+          }
+        }
+      }
+    },
+    "Ask before deleting a session": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "删除会话前先询问"
+          }
+        }
+      }
+    },
+    "Assistant: ": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "助手: "
+          }
+        }
+      }
+    },
+    "Attach images or text files — drag and drop works too": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "添加图片或文本文件 —— 也支持拖放"
+          }
+        }
+      }
+    },
+    "Attachment not added": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "附件未添加"
+          }
+        }
+      }
+    },
+    "Auto-compaction": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自动压缩"
+          }
+        }
+      }
+    },
+    "Auto-retry": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自动重试"
+          }
+        }
+      }
+    },
+    "Automatic": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自动"
+          }
+        }
+      }
+    },
+    "Back": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "返回"
+          }
+        }
+      }
+    },
+    "Back to app": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "返回应用"
+          }
+        }
+      }
+    },
+    "Base URL": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Base URL"
+          }
+        }
+      }
+    },
+    "Bash: ": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bash: "
+          }
+        }
+      }
+    },
+    "Branch from This Response…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "以此回复创建分支…"
+          }
+        }
+      }
+    },
+    "Branch from response": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "从回复创建分支"
+          }
+        }
+      }
+    },
+    "Branch summary": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "分支摘要"
+          }
+        }
+      }
+    },
+    "Cancel": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "取消"
+          }
+        }
+      }
+    },
+    "Cannot preview this file": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法预览此文件"
+          }
+        }
+      }
+    },
+    "Changes and context (⌥⌘I)": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "变更与上下文 (⌥⌘I)"
+          }
+        }
+      }
+    },
+    "Changing this restarts Pi for this session. Decisions are written to Pi's own trust store, the same file `/trust` writes.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "修改此项会为本会话重启 Pi。决定会写入 Pi 自己的信任库,与 `/trust` 写入的是同一个文件。"
+          }
+        }
+      }
+    },
+    "Chat actions": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "对话操作"
+          }
+        }
+      }
+    },
+    "ChatGPT subscription": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ChatGPT 订阅"
+          }
+        }
+      }
+    },
+    "Check Again": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重新检查"
+          }
+        }
+      }
+    },
+    "Check again": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重新检查"
+          }
+        }
+      }
+    },
+    "Checking for updates…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在检查更新…"
+          }
+        }
+      }
+    },
+    "Checking…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "检查中…"
+          }
+        }
+      }
+    },
+    "Choose a folder for new chats": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "为新对话选择文件夹"
+          }
+        }
+      }
+    },
+    "Choose a supported harness and installation method.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "选择受支持的代理程序与安装方式。"
+          }
+        }
+      }
+    },
+    "Choose an option": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请选择一项"
+          }
+        }
+      }
+    },
+    "Choose how the agent runs in this folder.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "选择代理在此文件夹中的运行方式。"
+          }
+        }
+      }
+    },
+    "Choose…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "选择…"
+          }
+        }
+      }
+    },
+    "Claude Code OAuth is ready.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Claude Code 的 OAuth 已就绪。"
+          }
+        }
+      }
+    },
+    "Claude Code is using its saved account.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Claude Code 正在使用其已保存的账号。"
+          }
+        }
+      }
+    },
+    "Claude subscription": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Claude 订阅"
+          }
+        }
+      }
+    },
+    "Clear": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "清除"
+          }
+        }
+      }
+    },
+    "Clear All": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "全部清除"
+          }
+        }
+      }
+    },
+    "Clear Queue": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "清空队列"
+          }
+        }
+      }
+    },
+    "Clear search": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "清除搜索"
+          }
+        }
+      }
+    },
+    "Click a change, a file, a command, or a tool result in the conversation to open it here.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "点击对话中的变更、文件、命令或工具结果,即可在此处打开。"
+          }
+        }
+      }
+    },
+    "Clone": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "克隆"
+          }
+        }
+      }
+    },
+    "Clone cancelled by an extension": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "克隆被扩展取消"
+          }
+        }
+      }
+    },
+    "Clone this chat": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "克隆此对话"
+          }
+        }
+      }
+    },
+    "Cloned the current branch": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已克隆当前分支"
+          }
+        }
+      }
+    },
+    "Close": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "关闭"
+          }
+        }
+      }
+    },
+    "Codex is signed in.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Codex 已登录。"
+          }
+        }
+      }
+    },
+    "Coding": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "编码"
+          }
+        }
+      }
+    },
+    "Command-Return sends, Return adds a line": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Command+Return 发送,Return 换行"
+          }
+        }
+      }
+    },
+    "Commands run through Pi's bash tool, in the project directory, and are appended to this session.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "命令通过 Pi 的 bash 工具在项目目录中运行,并追加到本会话。"
+          }
+        }
+      }
+    },
+    "Compact Context": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "压缩上下文"
+          }
+        }
+      }
+    },
+    "Compact context": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "压缩上下文"
+          }
+        }
+      }
+    },
+    "Compact with Instructions": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "带指令压缩"
+          }
+        }
+      }
+    },
+    "Compact with Instructions…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "带指令压缩…"
+          }
+        }
+      }
+    },
+    "Compacted context": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已压缩的上下文"
+          }
+        }
+      }
+    },
+    "Compacting": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "压缩中"
+          }
+        }
+      }
+    },
+    "Compacting context": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在压缩上下文"
+          }
+        }
+      }
+    },
+    "Compaction aborted": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "压缩已中止"
+          }
+        }
+      }
+    },
+    "Compaction failed": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "压缩失败"
+          }
+        }
+      }
+    },
+    "Compaction summary": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "压缩摘要"
+          }
+        }
+      }
+    },
+    "Compatibility": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "兼容性"
+          }
+        }
+      }
+    },
+    "Composer": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "输入区"
+          }
+        }
+      }
+    },
+    "Configure the provider endpoint, protocol, credentials, and available models.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "配置服务商端点、协议、凭据和可用模型。"
+          }
+        }
+      }
+    },
+    "Confirm": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "确认"
+          }
+        }
+      }
+    },
+    "Conflicted": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "有冲突"
+          }
+        }
+      }
+    },
+    "Connected": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已连接"
+          }
+        }
+      }
+    },
+    "Context": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "上下文"
+          }
+        }
+      }
+    },
+    "Context window": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "上下文窗口"
+          }
+        }
+      }
+    },
+    "Copied": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已拷贝"
+          }
+        }
+      }
+    },
+    "Copy": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拷贝"
+          }
+        }
+      }
+    },
+    "Copy Arguments": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拷贝参数"
+          }
+        }
+      }
+    },
+    "Copy Entry ID": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拷贝条目 ID"
+          }
+        }
+      }
+    },
+    "Copy Last Response": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拷贝最后一条回复"
+          }
+        }
+      }
+    },
+    "Copy Message": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拷贝消息"
+          }
+        }
+      }
+    },
+    "Copy Output": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拷贝输出"
+          }
+        }
+      }
+    },
+    "Copy Parent ID": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拷贝父条目 ID"
+          }
+        }
+      }
+    },
+    "Copy Path": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拷贝路径"
+          }
+        }
+      }
+    },
+    "Copy Response": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拷贝回复"
+          }
+        }
+      }
+    },
+    "Copy Session Path": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拷贝会话路径"
+          }
+        }
+      }
+    },
+    "Copy Summary": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拷贝摘要"
+          }
+        }
+      }
+    },
+    "Copy Transcript": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拷贝对话记录"
+          }
+        }
+      }
+    },
+    "Copy code": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拷贝代码"
+          }
+        }
+      }
+    },
+    "Copy command": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "复制命令"
+          }
+        }
+      }
+    },
+    "Copy last response": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拷贝最后一条回复"
+          }
+        }
+      }
+    },
+    "Copy log": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拷贝日志"
+          }
+        }
+      }
+    },
+    "Copy message": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拷贝消息"
+          }
+        }
+      }
+    },
+    "Copy output": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拷贝输出"
+          }
+        }
+      }
+    },
+    "Copy path": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拷贝路径"
+          }
+        }
+      }
+    },
+    "Copy project path": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拷贝项目路径"
+          }
+        }
+      }
+    },
+    "Copy session file path": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拷贝会话文件路径"
+          }
+        }
+      }
+    },
+    "Copy the Oh My Pi command": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拷贝 Oh My Pi 命令"
+          }
+        }
+      }
+    },
+    "Copy this message": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拷贝此消息"
+          }
+        }
+      }
+    },
+    "Copy tool output": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拷贝工具输出"
+          }
+        }
+      }
+    },
+    "Copy transcript": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拷贝对话记录"
+          }
+        }
+      }
+    },
+    "Create Chat": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新建对话"
+          }
+        }
+      }
+    },
+    "Current git branch": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "当前 git 分支"
+          }
+        }
+      }
+    },
+    "Cycle Model": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "切换模型"
+          }
+        }
+      }
+    },
+    "Cycle Thinking Level": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "切换思考等级"
+          }
+        }
+      }
+    },
+    "Dark": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "深色"
+          }
+        }
+      }
+    },
+    "Defaults for new sessions": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新会话默认值"
+          }
+        }
+      }
+    },
+    "Delete": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "删除"
+          }
+        }
+      }
+    },
+    "Delete Session?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "删除会话?"
+          }
+        }
+      }
+    },
+    "Delete Session…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "删除会话…"
+          }
+        }
+      }
+    },
+    "Delete this chat": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "删除此对话"
+          }
+        }
+      }
+    },
+    "Deleted": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已删除"
+          }
+        }
+      }
+    },
+    "Deleting removes the session's `.jsonl` file from disk and cannot be undone.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "删除会从磁盘移除该会话的 `.jsonl` 文件,且无法撤销。"
+          }
+        }
+      }
+    },
+    "Diagnostics": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "诊断"
+          }
+        }
+      }
+    },
+    "Dictate (uses macOS Dictation)": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "听写(使用 macOS 听写)"
+          }
+        }
+      }
+    },
+    "Direct bash": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "直接 bash"
+          }
+        }
+      }
+    },
+    "Disconnected": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已断开"
+          }
+        }
+      }
+    },
+    "Dismiss": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "忽略"
+          }
+        }
+      }
+    },
+    "Dismiss every notification in this session": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "忽略本会话的全部通知"
+          }
+        }
+      }
+    },
+    "Dismiss notification": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "忽略通知"
+          }
+        }
+      }
+    },
+    "Do anything": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "随便问点什么"
+          }
+        }
+      }
+    },
+    "Don't Trust": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "不信任"
+          }
+        }
+      }
+    },
+    "Done": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "完成"
+          }
+        }
+      }
+    },
+    "Drag to resize the terminal": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拖动以调整终端大小"
+          }
+        }
+      }
+    },
+    "Drop everything Pi has queued": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "丢弃 Pi 已排队的所有内容"
+          }
+        }
+      }
+    },
+    "Edit": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "编辑"
+          }
+        }
+      }
+    },
+    "Edit Message…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "编辑消息…"
+          }
+        }
+      }
+    },
+    "Edit in the composer": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在输入区编辑"
+          }
+        }
+      }
+    },
+    "Edit message": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "编辑消息"
+          }
+        }
+      }
+    },
+    "Edit text": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "编辑文本"
+          }
+        }
+      }
+    },
+    "Edit this message and send it as a new branch": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "编辑此消息,并作为新分支发送"
+          }
+        }
+      }
+    },
+    "Edited file": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "编辑了文件"
+          }
+        }
+      }
+    },
+    "Edited files": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "编辑了多个文件"
+          }
+        }
+      }
+    },
+    "Enter a valid HTTP or HTTPS endpoint.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请输入有效的 HTTP 或 HTTPS 端点。"
+          }
+        }
+      }
+    },
+    "Enter a value": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "输入一个值"
+          }
+        }
+      }
+    },
+    "Export Session as HTML…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "导出会话为 HTML…"
+          }
+        }
+      }
+    },
+    "Export as HTML…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "导出为 HTML…"
+          }
+        }
+      }
+    },
+    "Exported the session": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已导出会话"
+          }
+        }
+      }
+    },
+    "Extension request": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "扩展请求"
+          }
+        }
+      }
+    },
+    "Extension request expired": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "扩展请求已过期"
+          }
+        }
+      }
+    },
+    "Extensions": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "扩展"
+          }
+        }
+      }
+    },
+    "Extensions execute arbitrary code and skills can instruct the model to run commands. Review the source before installing. Browsing shows packages tagged `pi-package` on the public npm registry; PiCode hands installs and removals to your own `pi` binary.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "扩展可执行任意代码,技能也能指示模型运行命令。安装前请审阅源码。浏览列表展示公共 npm 注册表中带有 `pi-package` 标签的包;安装与卸载都交给你自己的 `pi` 二进制完成。"
+          }
+        }
+      }
+    },
+    "Extra arguments": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "额外参数"
+          }
+        }
+      }
+    },
+    "Failed": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "失败"
+          }
+        }
+      }
+    },
+    "Focus Composer": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "聚焦输入区"
+          }
+        }
+      }
+    },
+    "Follow System": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "跟随系统"
+          }
+        }
+      }
+    },
+    "Follow-up": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "跟进消息"
+          }
+        }
+      }
+    },
+    "Forget Hidden Sessions": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "忘记已隐藏的会话"
+          }
+        }
+      }
+    },
+    "Fork": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "派生"
+          }
+        }
+      }
+    },
+    "Fork Session": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "派生会话"
+          }
+        }
+      }
+    },
+    "Fork cancelled by an extension": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "派生被扩展取消"
+          }
+        }
+      }
+    },
+    "Fork from This Message": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "从此消息派生"
+          }
+        }
+      }
+    },
+    "Fork from last message…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "从最后一条消息派生…"
+          }
+        }
+      }
+    },
+    "Forked from an earlier message": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "派生自更早的一条消息"
+          }
+        }
+      }
+    },
+    "Forking starts a new session from a message in this conversation. The original session is left untouched.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "派生会以本对话中的某条消息为起点新建会话,原会话保持不变。"
+          }
+        }
+      }
+    },
+    "Fork…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "派生…"
+          }
+        }
+      }
+    },
+    "Forward": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "转发"
+          }
+        }
+      }
+    },
+    "Full access": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "完整访问权限"
+          }
+        }
+      }
+    },
+    "General": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "通用"
+          }
+        }
+      }
+    },
+    "Git": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Git"
+          }
+        }
+      }
+    },
+    "Harness": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "代理程序"
+          }
+        }
+      }
+    },
+    "Harnesses": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "代理程序"
+          }
+        }
+      }
+    },
+    "Hidden and pinned": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "隐藏与置顶"
+          }
+        }
+      }
+    },
+    "Hide from Sidebar": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "从侧栏隐藏"
+          }
+        }
+      }
+    },
+    "Hide the terminal panel": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "隐藏终端面板"
+          }
+        }
+      }
+    },
+    "Home": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "主页"
+          }
+        }
+      }
+    },
+    "How PiCode looks for Pi": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PiCode 如何查找 Pi"
+          }
+        }
+      }
+    },
+    "Idle": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "空闲"
+          }
+        }
+      }
+    },
+    "Ignored. Pi's TUI may support this surface.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已忽略。Pi 的终端界面可能支持这一形态。"
+          }
+        }
+      }
+    },
+    "Indexing sessions…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在索引会话…"
+          }
+        }
+      }
+    },
+    "Install": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "安装"
+          }
+        }
+      }
+    },
+    "Install Pi": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "安装 Pi"
+          }
+        }
+      }
+    },
+    "Install an npm package, a git repository, or a local path through Pi": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "通过 Pi 安装 npm 包、git 仓库或本地路径"
+          }
+        }
+      }
+    },
+    "Install for": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "安装范围"
+          }
+        }
+      }
+    },
+    "Install from Source…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "从源码安装…"
+          }
+        }
+      }
+    },
+    "Installed": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已安装"
+          }
+        }
+      }
+    },
+    "Installed harnesses run coding sessions and keep their own API and account configuration.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已安装的代理程序负责运行编码会话,并各自保留其 API 与账号配置。"
+          }
+        }
+      }
+    },
+    "Integrations": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "集成"
+          }
+        }
+      }
+    },
+    "Interrupt and Restore Queue": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "中断并恢复队列"
+          }
+        }
+      }
+    },
+    "It asks your login shell first, then falls back to common install locations.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "它先询问你的登录 shell,再回退到常见安装位置。"
+          }
+        }
+      }
+    },
+    "JSON": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "JSON"
+          }
+        }
+      }
+    },
+    "Jump to latest": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "跳到最新"
+          }
+        }
+      }
+    },
+    "Keep Working": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "继续工作"
+          }
+        }
+      }
+    },
+    "Key reference": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "密钥引用"
+          }
+        }
+      }
+    },
+    "Language": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "语言"
+          }
+        }
+      }
+    },
+    "Launch arguments": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "启动参数"
+          }
+        }
+      }
+    },
+    "Light": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "浅色"
+          }
+        }
+      }
+    },
+    "Load Models": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "加载模型"
+          }
+        }
+      }
+    },
+    "Loading earlier messages…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在加载更早的消息…"
+          }
+        }
+      }
+    },
+    "Local Claude credentials": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "本地 Claude 凭据"
+          }
+        }
+      }
+    },
+    "Local Codex credentials": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "本地 Codex 凭据"
+          }
+        }
+      }
+    },
+    "Local accounts ready": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "本地账号已就绪"
+          }
+        }
+      }
+    },
+    "Login shell: `command -v pi` in your shell, with your shell's PATH.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "登录 shell:在你的 shell 里执行 `command -v pi`,使用该 shell 的 PATH。"
+          }
+        }
+      }
+    },
+    "Looking for your Pi installation…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在查找你的 Pi 安装…"
+          }
+        }
+      }
+    },
+    "Manage Harnesses…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "管理代理程序…"
+          }
+        }
+      }
+    },
+    "Markdown": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Markdown"
+          }
+        }
+      }
+    },
+    "Match the system or force a light or dark window.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "跟随系统,或强制使用浅色/深色窗口。"
+          }
+        }
+      }
+    },
+    "Messages Pi extensions send with `notify` appear here instead of over the conversation.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pi 扩展通过 `notify` 发送的消息显示在这里,而不是浮在对话之上。"
+          }
+        }
+      }
+    },
+    "Model": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "模型"
+          }
+        }
+      }
+    },
+    "Model and reasoning effort used for new prompts": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新提示词使用的模型与推理强度"
+          }
+        }
+      }
+    },
+    "Model ids": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "模型 ID"
+          }
+        }
+      }
+    },
+    "Modes": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "模式"
+          }
+        }
+      }
+    },
+    "Modified": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已修改"
+          }
+        }
+      }
+    },
+    "More": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "更多"
+          }
+        }
+      }
+    },
+    "Needs decision": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "待决定"
+          }
+        }
+      }
+    },
+    "New Session": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新建会话"
+          }
+        }
+      }
+    },
+    "New chat": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新建对话"
+          }
+        }
+      }
+    },
+    "New chats start here. Existing sessions keep the folder they ran in.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新对话从这里开始。已有会话仍保留其运行时的文件夹。"
+          }
+        }
+      }
+    },
+    "New project": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新建项目"
+          }
+        }
+      }
+    },
+    "New session": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新建会话"
+          }
+        }
+      }
+    },
+    "New session cancelled by an extension": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新会话被扩展取消"
+          }
+        }
+      }
+    },
+    "No Pi account credentials configured.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "尚未配置 Pi 账号凭据。"
+          }
+        }
+      }
+    },
+    "No commands yet": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "还没有命令"
+          }
+        }
+      }
+    },
+    "No extension UI is active.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "当前没有活动的扩展界面。"
+          }
+        }
+      }
+    },
+    "No file selected": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未选择文件"
+          }
+        }
+      }
+    },
+    "No harness with a PiCode adapter is installed yet. Install one in Settings → Harnesses.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "尚未安装带 PiCode 适配器的代理程序。请在「设置 → 代理程序」中安装。"
+          }
+        }
+      }
+    },
+    "No local accounts": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无本地账号"
+          }
+        }
+      }
+    },
+    "No matches": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无匹配结果"
+          }
+        }
+      }
+    },
+    "No notifications": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无通知"
+          }
+        }
+      }
+    },
+    "No project is selected, so a project-scoped install has nowhere to go.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未选择项目,因此无法进行项目范围的安装。"
+          }
+        }
+      }
+    },
+    "No project resources": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无项目资源"
+          }
+        }
+      }
+    },
+    "No projects yet": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "还没有项目"
+          }
+        }
+      }
+    },
+    "No sessions yet": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "还没有会话"
+          }
+        }
+      }
+    },
+    "No text diff": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无文本差异"
+          }
+        }
+      }
+    },
+    "No text diff available (binary file, untracked file, or no changes on disk).": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "没有可用的文本差异(二进制文件、未跟踪文件,或磁盘上无变化)。"
+          }
+        }
+      }
+    },
+    "No tree yet": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "还没有树"
+          }
+        }
+      }
+    },
+    "Not available": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "不可用"
+          }
+        }
+      }
+    },
+    "Not evaluated": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未评估"
+          }
+        }
+      }
+    },
+    "Not found": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未找到"
+          }
+        }
+      }
+    },
+    "Not installed": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未安装"
+          }
+        }
+      }
+    },
+    "Not ready": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未就绪"
+          }
+        }
+      }
+    },
+    "Not signed in": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未登录"
+          }
+        }
+      }
+    },
+    "Not started": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未开始"
+          }
+        }
+      }
+    },
+    "Not trusted": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未信任"
+          }
+        }
+      }
+    },
+    "Nothing has happened yet.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "还没有任何动静。"
+          }
+        }
+      }
+    },
+    "Nothing selected": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未选择任何内容"
+          }
+        }
+      }
+    },
+    "Notifications": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "通知"
+          }
+        }
+      }
+    },
+    "Notify when a long turn finishes": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "长时间回合结束时通知"
+          }
+        }
+      }
+    },
+    "OAuth": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OAuth"
+          }
+        }
+      }
+    },
+    "OMP interrupted a chunked RPC response.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OMP 中断了一个分块 RPC 响应。"
+          }
+        }
+      }
+    },
+    "OMP sent RPC response chunks out of sequence.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OMP 发送的 RPC 响应分块顺序错乱。"
+          }
+        }
+      }
+    },
+    "OMP sent an invalid RPC chunk payload.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OMP 发送了无效的 RPC 分块载荷。"
+          }
+        }
+      }
+    },
+    "OMP sent invalid RPC chunk metadata.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OMP 发送了无效的 RPC 分块元数据。"
+          }
+        }
+      }
+    },
+    "OMP's chunked RPC response length did not match its metadata.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OMP 的分块 RPC 响应长度与其元数据不符。"
+          }
+        }
+      }
+    },
+    "OMP's reassembled RPC response was not valid JSON.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OMP 重组后的 RPC 响应不是合法的 JSON。"
+          }
+        }
+      }
+    },
+    "Oh My Pi did not accept RPC protocol v2.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oh My Pi 未接受 RPC 协议 v2。"
+          }
+        }
+      }
+    },
+    "Oh My Pi owns account credentials in its agent database. Open OMP and use `/login`; shared third-party providers are synchronized separately.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oh My Pi 的账号凭据保存在它自己的代理数据库中。请打开 OMP 并使用 `/login`;共享的第三方服务商另行同步。"
+          }
+        }
+      }
+    },
+    "One at a time": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "逐个处理"
+          }
+        }
+      }
+    },
+    "Only one model is available": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "只有一个可用模型"
+          }
+        }
+      }
+    },
+    "Open": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "打开"
+          }
+        }
+      }
+    },
+    "Open Project Folder…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "打开项目文件夹…"
+          }
+        }
+      }
+    },
+    "Open Project in Terminal": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在终端中打开项目"
+          }
+        }
+      }
+    },
+    "Open Project in VS Code": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在 VS Code 中打开项目"
+          }
+        }
+      }
+    },
+    "Open Terminal": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "打开终端"
+          }
+        }
+      }
+    },
+    "Open Terminal in Home": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在主目录打开终端"
+          }
+        }
+      }
+    },
+    "Open a session to choose a default model. The selected harness's own default is used until then.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "打开一个会话以选择默认模型。在此之前,使用所选代理程序自身的默认值。"
+          }
+        }
+      }
+    },
+    "Open in Finder": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在访达中显示"
+          }
+        }
+      }
+    },
+    "Open in Terminal": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在终端中打开"
+          }
+        }
+      }
+    },
+    "Open in VS Code": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在 VS Code 中打开"
+          }
+        }
+      }
+    },
+    "Open with the default application": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用默认应用打开"
+          }
+        }
+      }
+    },
+    "Open…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "打开…"
+          }
+        }
+      }
+    },
+    "Optional Pi configuration. Other harnesses own separate provider catalogs.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "可选的 Pi 配置。其他代理程序有各自独立的服务商目录。"
+          }
+        }
+      }
+    },
+    "Output": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "输出"
+          }
+        }
+      }
+    },
+    "Overrides the system setting for PiCode's animations only.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "仅覆盖 PiCode 动画效果的系统设置。"
+          }
+        }
+      }
+    },
+    "Packages": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "包管理"
+          }
+        }
+      }
+    },
+    "Parent folder trusted": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已信任父文件夹"
+          }
+        }
+      }
+    },
+    "Path": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "路径"
+          }
+        }
+      }
+    },
+    "Personal": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "个人"
+          }
+        }
+      }
+    },
+    "Pi Setup Help": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pi 安装帮助"
+          }
+        }
+      }
+    },
+    "Pi builds the session tree as messages are exchanged.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pi 会在消息往来中构建会话树。"
+          }
+        }
+      }
+    },
+    "Pi configuration": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pi 配置"
+          }
+        }
+      }
+    },
+    "Pi could not load its credential or model configuration": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pi 无法加载其凭据或模型配置"
+          }
+        }
+      }
+    },
+    "Pi has not reported any forkable messages yet. Send a message first.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pi 还没有报告任何可派生的消息。请先发送一条消息。"
+          }
+        }
+      }
+    },
+    "Pi has not reported usage yet.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pi 尚未报告用量。"
+          }
+        }
+      }
+    },
+    "Pi is not running…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pi 未运行…"
+          }
+        }
+      }
+    },
+    "Pi is reading the session history": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pi 正在读取会话历史"
+          }
+        }
+      }
+    },
+    "Pi is running with `--no-approve`, so this project's resources are ignored.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pi 正以 `--no-approve` 运行,因此此项目的资源被忽略。"
+          }
+        }
+      }
+    },
+    "Pi packages run with full access": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pi 包以完整权限运行"
+          }
+        }
+      }
+    },
+    "Pi reported an error": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pi 报告了一个错误"
+          }
+        }
+      }
+    },
+    "Pi runs as you — the current macOS user — so it can read and write the files your account can, and run shell commands with your permissions. Trusting a project does not change any of that: it only decides whether Pi loads that project's own settings, extensions, skills, prompts, themes, and system prompts.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pi 以你 —— 当前 macOS 用户 —— 的身份运行,因此能读写你账号可访问的文件,并以你的权限执行 shell 命令。信任项目不会改变这些:它只决定 Pi 是否加载该项目自带的设置、扩展、技能、提示词、主题和系统提示词。"
+          }
+        }
+      }
+    },
+    "Pi sent an extension UI request PiCode does not render yet. The extension keeps running; this request was ignored.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pi 发送了 PiCode 尚不支持的扩展界面请求。扩展仍在运行,该请求已被忽略。"
+          }
+        }
+      }
+    },
+    "Pi stores the name in the session file, so other Pi clients see it too.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pi 会把名称存入会话文件,因此其他 Pi 客户端也能看到。"
+          }
+        }
+      }
+    },
+    "Pi summarizes the conversation, keeping what you describe here. Your existing messages stay in the session file.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pi 会压缩对话,保留你在此描述的内容。已有消息仍留在会话文件中。"
+          }
+        }
+      }
+    },
+    "Pi walks the whole session for this list, so long sessions take a while.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pi 会遍历整个会话以生成此列表,因此长会话需要一些时间。"
+          }
+        }
+      }
+    },
+    "Pi was not found": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未找到 Pi"
+          }
+        }
+      }
+    },
+    "Pi was not found, so packages cannot be installed or removed.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未找到 Pi,因此无法安装或移除包。"
+          }
+        }
+      }
+    },
+    "Pi's default": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pi 的默认值"
+          }
+        }
+      }
+    },
+    "Pi's folder": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pi 的文件夹"
+          }
+        }
+      }
+    },
+    "Pi's session storage": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pi 的会话存储"
+          }
+        }
+      }
+    },
+    "Pi's user settings (~/.pi/agent/settings.json)": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pi 的用户设置(~/.pi/agent/settings.json)"
+          }
+        }
+      }
+    },
+    "PiCode asked Pi for the resources this project declares and has not had an answer yet.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PiCode 已向 Pi 询问此项目声明的资源,但尚未得到答复。"
+          }
+        }
+      }
+    },
+    "PiCode asks the installed CLI for status and launches it normally. Tokens remain in the CLI's own credential store.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PiCode 向已安装的 CLI 询问状态,并按常规方式启动它。令牌仍留在该 CLI 自己的凭据存储中。"
+          }
+        }
+      }
+    },
+    "PiCode indexes these files read-only and never rewrites them.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PiCode 只读地索引这些文件,永不改写它们。"
+          }
+        }
+      }
+    },
+    "PiCode is a client for Pi Coding Agent. It does not bundle Pi, and it never installs or updates it for you.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PiCode 是 Pi Coding Agent 的客户端。它不捆绑 Pi,也不会替你安装或更新 Pi。"
+          }
+        }
+      }
+    },
+    "Pick a file to preview it. Pi can open the same file from a `path:line` link in its answer.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "选择一个文件以预览。Pi 可以从回答中的 `path:line` 链接打开同一个文件。"
+          }
+        }
+      }
+    },
+    "Preset": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "预设"
+          }
+        }
+      }
+    },
+    "Project": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "项目"
+          }
+        }
+      }
+    },
+    "Project Settings": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "项目设置"
+          }
+        }
+      }
+    },
+    "Project actions": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "项目操作"
+          }
+        }
+      }
+    },
+    "Project resources are not trusted, so Pi is running without them.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "项目资源未被信任,因此 Pi 在加载时跳过了它们。"
+          }
+        }
+      }
+    },
+    "Projects": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "项目"
+          }
+        }
+      }
+    },
+    "Protocol problem": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "协议问题"
+          }
+        }
+      }
+    },
+    "Provider": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "服务商"
+          }
+        }
+      }
+    },
+    "Provider and model": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "服务商与模型"
+          }
+        }
+      }
+    },
+    "Provider id": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "服务商 ID"
+          }
+        }
+      }
+    },
+    "Providers": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "服务商"
+          }
+        }
+      }
+    },
+    "Providers and Credentials…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "服务商与凭据…"
+          }
+        }
+      }
+    },
+    "Query the endpoint for its model list": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "向端点查询其模型列表"
+          }
+        }
+      }
+    },
+    "Queue": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "队列"
+          }
+        }
+      }
+    },
+    "Queue as follow-up": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "作为跟进排队"
+          }
+        }
+      }
+    },
+    "Queue as steering": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "作为插话排队"
+          }
+        }
+      }
+    },
+    "Queue changed": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "队列已变更"
+          }
+        }
+      }
+    },
+    "Queued": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "排队中"
+          }
+        }
+      }
+    },
+    "RPC payload log": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "RPC 载荷日志"
+          }
+        }
+      }
+    },
+    "Ran command": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "运行了命令"
+          }
+        }
+      }
+    },
+    "Ran commands": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "运行了多条命令"
+          }
+        }
+      }
+    },
+    "Raw HTML block": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "原始 HTML 块"
+          }
+        }
+      }
+    },
+    "Read file": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "读取了文件"
+          }
+        }
+      }
+    },
+    "Read files": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "读取了多个文件"
+          }
+        }
+      }
+    },
+    "Read-only: Pi's `/tree` navigation is TUI-only. Fork from any message to branch here instead.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "只读:Pi 的 `/tree` 导航仅限终端界面。请改为从任意消息派生,在此处分叉。"
+          }
+        }
+      }
+    },
+    "Reading this session's history…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在读取本会话的历史…"
+          }
+        }
+      }
+    },
+    "Reasoning effort": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "推理强度"
+          }
+        }
+      }
+    },
+    "Reasoning effort unavailable": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "推理强度不可用"
+          }
+        }
+      }
+    },
+    "Recorded payloads": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已记录的载荷"
+          }
+        }
+      }
+    },
+    "Reduce motion": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "减弱动态效果"
+          }
+        }
+      }
+    },
+    "Reference this file in the composer as @path": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在输入区以 @path 引用此文件"
+          }
+        }
+      }
+    },
+    "Refresh": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "刷新"
+          }
+        }
+      }
+    },
+    "Refresh changes": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "刷新变更"
+          }
+        }
+      }
+    },
+    "Reload Sessions": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重新加载会话"
+          }
+        }
+      }
+    },
+    "Reload installed packages and refresh the gallery": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重新加载已安装的包并刷新列表"
+          }
+        }
+      }
+    },
+    "Reload packages": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重新加载包"
+          }
+        }
+      }
+    },
+    "Reload sessions from disk": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "从磁盘重新加载会话"
+          }
+        }
+      }
+    },
+    "Reload sessions from disk (⌘R)": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "从磁盘重新加载会话 (⌘R)"
+          }
+        }
+      }
+    },
+    "Reload the tree from Pi": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "从 Pi 重新加载树"
+          }
+        }
+      }
+    },
+    "Remove": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "移除"
+          }
+        }
+      }
+    },
+    "Remove from the queue": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "从队列移除"
+          }
+        }
+      }
+    },
+    "Remove this Pi credential?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "移除此 Pi 凭据?"
+          }
+        }
+      }
+    },
+    "Remove this configuration?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "移除此配置?"
+          }
+        }
+      }
+    },
+    "Rename": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重命名"
+          }
+        }
+      }
+    },
+    "Rename Session": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重命名会话"
+          }
+        }
+      }
+    },
+    "Rename Session…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重命名会话…"
+          }
+        }
+      }
+    },
+    "Rename…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重命名…"
+          }
+        }
+      }
+    },
+    "Repair": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "修复"
+          }
+        }
+      }
+    },
+    "Retry cancelled": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重试已取消"
+          }
+        }
+      }
+    },
+    "Retry failed": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重试失败"
+          }
+        }
+      }
+    },
+    "Retry succeeded": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重试成功"
+          }
+        }
+      }
+    },
+    "Retrying after a transient error": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "遇到瞬时错误,正在重试"
+          }
+        }
+      }
+    },
+    "Return sends, Shift-Return adds a line": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Return 发送,Shift+Return 换行"
+          }
+        }
+      }
+    },
+    "Reveal": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "显示"
+          }
+        }
+      }
+    },
+    "Reveal Pi's Config Folder": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "显示 Pi 的配置文件夹"
+          }
+        }
+      }
+    },
+    "Reveal Project in Finder": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在访达中显示项目"
+          }
+        }
+      }
+    },
+    "Reveal Session File": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "显示会话文件"
+          }
+        }
+      }
+    },
+    "Reveal auth.json": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "显示 auth.json"
+          }
+        }
+      }
+    },
+    "Reveal in Finder": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在访达中显示"
+          }
+        }
+      }
+    },
+    "Run": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "运行"
+          }
+        }
+      }
+    },
+    "Run `claude auth login` and choose your Claude subscription.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "运行 `claude auth login`,并选择你的 Claude 订阅。"
+          }
+        }
+      }
+    },
+    "Run a command here, or let Pi run one — both show up in this list.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在此运行命令,或让 Pi 运行 —— 两者都会出现在此列表中。"
+          }
+        }
+      }
+    },
+    "Run a command, or search projects and chats": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "运行命令,或搜索项目与对话"
+          }
+        }
+      }
+    },
+    "Running…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "运行中…"
+          }
+        }
+      }
+    },
+    "Save": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "保存"
+          }
+        }
+      }
+    },
+    "Saved to Pi's trust store": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已保存到 Pi 的信任库"
+          }
+        }
+      }
+    },
+    "Search": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "搜索"
+          }
+        }
+      }
+    },
+    "Search Again": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重新搜索"
+          }
+        }
+      }
+    },
+    "Search history (⇧⌘P)": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "搜索历史 (⇧⌘P)"
+          }
+        }
+      }
+    },
+    "Search models": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "搜索模型"
+          }
+        }
+      }
+    },
+    "Search pi packages": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "搜索 Pi 包"
+          }
+        }
+      }
+    },
+    "Search sessions and commands (⇧⌘P)": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "搜索会话与命令 (⇧⌘P)"
+          }
+        }
+      }
+    },
+    "Searched:": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已搜索:"
+          }
+        }
+      }
+    },
+    "Searching npm…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在搜索 npm…"
+          }
+        }
+      }
+    },
+    "Select a file to see its diff.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "选择文件以查看其差异。"
+          }
+        }
+      }
+    },
+    "Send (⏎)": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "发送 (⏎)"
+          }
+        }
+      }
+    },
+    "Send key": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "发送键"
+          }
+        }
+      }
+    },
+    "Sending": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "发送"
+          }
+        }
+      }
+    },
+    "Session": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "会话"
+          }
+        }
+      }
+    },
+    "Session adapter not implemented": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "会话适配器未实现"
+          }
+        }
+      }
+    },
+    "Session file": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "会话文件"
+          }
+        }
+      }
+    },
+    "Session name": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "会话名称"
+          }
+        }
+      }
+    },
+    "Session settled": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "会话已结束"
+          }
+        }
+      }
+    },
+    "Session switch cancelled by an extension": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "会话切换被扩展取消"
+          }
+        }
+      }
+    },
+    "Session totals": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "会话总计"
+          }
+        }
+      }
+    },
+    "Session tree": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "会话树"
+          }
+        }
+      }
+    },
+    "Sessions": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "会话"
+          }
+        }
+      }
+    },
+    "Set API Key…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设置 API 密钥…"
+          }
+        }
+      }
+    },
+    "Set a Pi API key": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设置 Pi API 密钥"
+          }
+        }
+      }
+    },
+    "Settings": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设置"
+          }
+        }
+      }
+    },
+    "Settings…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设置…"
+          }
+        }
+      }
+    },
+    "Setup instructions": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "安装说明"
+          }
+        }
+      }
+    },
+    "Share": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "分享"
+          }
+        }
+      }
+    },
+    "Show": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "显示"
+          }
+        }
+      }
+    },
+    "Show hidden files": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "显示隐藏文件"
+          }
+        }
+      }
+    },
+    "Show inspector": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "显示检查器"
+          }
+        }
+      }
+    },
+    "Show more…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "显示更多…"
+          }
+        }
+      }
+    },
+    "Show this file in the Files tab": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在文件标签页中显示此文件"
+          }
+        }
+      }
+    },
+    "Show this file's diff in the inspector": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在检查器中显示此文件的差异"
+          }
+        }
+      }
+    },
+    "Show this in the inspector": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在检查器中显示"
+          }
+        }
+      }
+    },
+    "Shown in the sidebar and header. Blank uses the folder name.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "显示在侧栏和标题中。留空则使用文件夹名。"
+          }
+        }
+      }
+    },
+    "Something went wrong": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "出了点问题"
+          }
+        }
+      }
+    },
+    "Source": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "源码"
+          }
+        }
+      }
+    },
+    "Staged": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已暂存"
+          }
+        }
+      }
+    },
+    "Start a chat in the current project (⌘N)": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在当前项目中开启对话 (⌘N)"
+          }
+        }
+      }
+    },
+    "Start a new Pi branch from this response": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "从此回复开启新的 Pi 分支"
+          }
+        }
+      }
+    },
+    "Started a new session": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已开启新会话"
+          }
+        }
+      }
+    },
+    "Starting": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "启动中"
+          }
+        }
+      }
+    },
+    "Steer Pi, or queue a follow-up…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "给 Pi 插话,或排队一条跟进消息…"
+          }
+        }
+      }
+    },
+    "Steer into the current turn": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "插话到当前回合"
+          }
+        }
+      }
+    },
+    "Steering": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "插话"
+          }
+        }
+      }
+    },
+    "Stop": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "停止"
+          }
+        }
+      }
+    },
+    "Stop Pi and put anything queued back in the box (esc; ⌘. aborts without restoring)": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "停止 Pi,并把排队内容放回输入框(esc;⌘. 直接中止且不恢复)"
+          }
+        }
+      }
+    },
+    "Stop the Agent": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "停止代理"
+          }
+        }
+      }
+    },
+    "Stored on this Mac only. PiCode never writes Pi's configuration or edits session files.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "仅存储在这台 Mac 上。PiCode 永不写入 Pi 的配置,也不修改会话文件。"
+          }
+        }
+      }
+    },
+    "Structured result": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "结构化结果"
+          }
+        }
+      }
+    },
+    "Subscription & local account": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "订阅与本地账号"
+          }
+        }
+      }
+    },
+    "Summarization retry finished": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "摘要重试已完成"
+          }
+        }
+      }
+    },
+    "Summarization retry scheduled": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已安排摘要重试"
+          }
+        }
+      }
+    },
+    "Summarization retry started": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "摘要重试已开始"
+          }
+        }
+      }
+    },
+    "Supports reasoning": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "支持推理"
+          }
+        }
+      }
+    },
+    "System": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "跟随系统"
+          }
+        }
+      }
+    },
+    "Text Wrap": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "文本换行"
+          }
+        }
+      }
+    },
+    "The API key was empty.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "API 密钥为空。"
+          }
+        }
+      }
+    },
+    "The Pi process is not running.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pi 进程未运行。"
+          }
+        }
+      }
+    },
+    "The agent process is not running.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "代理进程未运行。"
+          }
+        }
+      }
+    },
+    "The endpoint responded, but did not return any models.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "端点有响应,但未返回任何模型。"
+          }
+        }
+      }
+    },
+    "The key that sends a message from the composer.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在输入区发送消息所用的按键。"
+          }
+        }
+      }
+    },
+    "The panel with the session's changes and context.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "展示会话变更与上下文的面板。"
+          }
+        }
+      }
+    },
+    "The project's .pi/settings.json": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "项目的 .pi/settings.json"
+          }
+        }
+      }
+    },
+    "The same sources `pi install` accepts: an npm package, a git repository, or a local path.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "与 `pi install` 接受的来源相同:npm 包、git 仓库或本地路径。"
+          }
+        }
+      }
+    },
+    "The session transcript is still shown. Restart to continue working in this session.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "会话记录仍会显示。要在此会话中继续工作,请重启。"
+          }
+        }
+      }
+    },
+    "Thinking": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "思考中"
+          }
+        }
+      }
+    },
+    "Thinking level": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "思考等级"
+          }
+        }
+      }
+    },
+    "This Mac": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "本机"
+          }
+        }
+      }
+    },
+    "This Pi does not offer that provider": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此 Pi 不提供该服务商"
+          }
+        }
+      }
+    },
+    "This Session": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "本会话"
+          }
+        }
+      }
+    },
+    "This call is no longer part of the conversation.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这次调用已不再属于该对话。"
+          }
+        }
+      }
+    },
+    "This file is binary, untracked, or unchanged on disk. Open the edit call itself to see the change Pi made.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此文件是二进制、未跟踪,或磁盘上无变化。请打开编辑调用本身查看 Pi 所做的改动。"
+          }
+        }
+      }
+    },
+    "This harness does not expose a local account-status command.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "该代理程序未提供本地账号状态命令。"
+          }
+        }
+      }
+    },
+    "This package will run with full access to your account. Extensions execute arbitrary code and skills can instruct the model to run commands. Install only what you trust.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此包将以你的账号完整权限运行。扩展可执行任意代码,技能也能指示模型运行命令。只安装你信任的内容。"
+          }
+        }
+      }
+    },
+    "This project": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此项目"
+          }
+        }
+      }
+    },
+    "This project can change how Pi behaves": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此项目可以改变 Pi 的行为"
+          }
+        }
+      }
+    },
+    "This project has nothing to load": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此项目没有可加载的资源"
+          }
+        }
+      }
+    },
+    "This project is not trusted": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此项目未受信任"
+          }
+        }
+      }
+    },
+    "This project is trusted": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此项目已信任"
+          }
+        }
+      }
+    },
+    "This tool reported a failure without output.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "该工具报告失败,但没有输出。"
+          }
+        }
+      }
+    },
+    "Timeline": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "时间线"
+          }
+        }
+      }
+    },
+    "Toggle Inspector": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "切换检查器"
+          }
+        }
+      }
+    },
+    "Toggle Sidebar": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "切换侧栏"
+          }
+        }
+      }
+    },
+    "Toggle Terminal": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "切换终端"
+          }
+        }
+      }
+    },
+    "Toggle sidebar (⌃⌘S)": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "切换侧栏 (⌃⌘S)"
+          }
+        }
+      }
+    },
+    "Totals include compacted history and abandoned branches.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "总计包含已压缩的历史和被放弃的分支。"
+          }
+        }
+      }
+    },
+    "Trust & Remember": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "信任并记住"
+          }
+        }
+      }
+    },
+    "Trust Parent Folder Instead": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "改为信任父文件夹"
+          }
+        }
+      }
+    },
+    "Trust for This Session": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "仅本会话信任"
+          }
+        }
+      }
+    },
+    "Trust project?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "信任此项目?"
+          }
+        }
+      }
+    },
+    "Trust state unknown": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "信任状态未知"
+          }
+        }
+      }
+    },
+    "Trust store not updated": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "信任库未更新"
+          }
+        }
+      }
+    },
+    "Trust…": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "信任…"
+          }
+        }
+      }
+    },
+    "Try a provider, model name, or qualified model ID.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "试试服务商、模型名,或带服务商前缀的模型 ID。"
+          }
+        }
+      }
+    },
+    "Turn finished": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "回合已结束"
+          }
+        }
+      }
+    },
+    "Turn started": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "回合已开始"
+          }
+        }
+      }
+    },
+    "Type a qualified model id, or leave blank to use the harness default and pick one in the composer.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "输入带服务商前缀的模型 ID;留空则使用代理程序默认值,并在输入区中选择。"
+          }
+        }
+      }
+    },
+    "Type changed": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "类型变更"
+          }
+        }
+      }
+    },
+    "Unavailable": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "不可用"
+          }
+        }
+      }
+    },
+    "Untracked": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未跟踪"
+          }
+        }
+      }
+    },
+    "Up to date": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已是最新"
+          }
+        }
+      }
+    },
+    "Usage": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用量"
+          }
+        }
+      }
+    },
+    "User: ": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用户: "
+          }
+        }
+      }
+    },
+    "Version": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "版本"
+          }
+        }
+      }
+    },
+    "Version check": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "版本检查"
+          }
+        }
+      }
+    },
+    "View": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "视图"
+          }
+        }
+      }
+    },
+    "View Log": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "查看日志"
+          }
+        }
+      }
+    },
+    "View Payload Log": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "查看载荷日志"
+          }
+        }
+      }
+    },
+    "Viewer settings": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "查看器设置"
+          }
+        }
+      }
+    },
+    "Waiting for your decision": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "等待你的决定"
+          }
+        }
+      }
+    },
+    "What should we build in ": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "要在其中构建什么:"
+          }
+        }
+      }
+    },
+    "What should we build?": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "想做点什么?"
+          }
+        }
+      }
+    },
+    "Working": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "工作中"
+          }
+        }
+      }
+    },
+    "Workspace": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "工作区"
+          }
+        }
+      }
+    },
+    "Writes a trust decision for the parent directory, which Pi applies to this project by nearest-ancestor lookup.": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "为父目录写入一条信任决定,Pi 会通过最近祖先查找将其应用于此项目。"
+          }
+        }
+      }
+    },
+    "created": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已创建"
+          }
+        }
+      }
+    },
+    "deleted": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已删除"
+          }
+        }
+      }
+    },
+    "in memory": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "内存中"
+          }
+        }
+      }
+    },
+    "modified": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已修改"
+          }
+        }
+      }
+    },
+    "no project resources": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无项目资源"
+          }
+        }
+      }
+    },
+    "not trusted": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未信任"
+          }
+        }
+      }
+    },
+    "read": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "读取"
+          }
+        }
+      }
+    },
+    "runs after this turn": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "本回合之后运行"
+          }
+        }
+      }
+    },
+    "steers this turn": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "插话到本回合"
+          }
+        }
+      }
+    },
+    "waiting for you": {
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "等待你确认"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

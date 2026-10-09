@@ -235,6 +235,19 @@ struct GeneralSettings: View {
     var body: some View {
         SettingsPage {
             SettingsSection("Appearance") {
+                SettingsRow("Language", detail: "Applies to the interface immediately; nothing restarts.") {
+                    Picker("", selection: Binding(
+                        get: { state.preferences.appLanguage },
+                        set: { state.preferences.appLanguage = $0; state.preferences.persist() }
+                    )) {
+                        ForEach(PreferencesStore.AppLanguage.allCases) { option in
+                            // 语言名已由 `AppLanguage.label` 本地化,这里按原样渲染。
+                            Text(verbatim: option.label).tag(option)
+                        }
+                    }
+                    .labelsHidden()
+                    .fixedSize()
+                }
                 SettingsRow("Appearance", detail: "Match the system or force a light or dark window.") {
                     Picker("", selection: Binding(
                         get: { state.preferences.appearance },

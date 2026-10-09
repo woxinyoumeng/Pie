@@ -161,11 +161,11 @@ struct ComposerAccessControl: View {
 
     private var title: String {
         switch controller.trustState {
-        case .trusted: return "This project is trusted"
-        case .notRequired: return "This project has nothing to load"
-        case .asked: return "Waiting for your decision"
-        case .untrusted: return "This project is not trusted"
-        case .unknown: return "Trust state unknown"
+        case .trusted: return L("This project is trusted")
+        case .notRequired: return L("This project has nothing to load")
+        case .asked: return L("Waiting for your decision")
+        case .untrusted: return L("This project is not trusted")
+        case .unknown: return L("Trust state unknown")
         }
     }
 
@@ -174,18 +174,18 @@ struct ComposerAccessControl: View {
     /// states name what is still pending.
     private var accessLabel: String {
         switch controller.trustState {
-        case .trusted, .notRequired, .unknown: return "Full access"
-        case .asked: return "Trust project?"
-        case .untrusted: return "Not trusted"
+        case .trusted, .notRequired, .unknown: return L("Full access")
+        case .asked: return L("Trust project?")
+        case .untrusted: return L("Not trusted")
         }
     }
 
     private var shortLabel: String {
         switch controller.trustState {
         case .trusted: return "trusted"
-        case .notRequired: return "no project resources"
-        case .asked: return "waiting for you"
-        case .untrusted: return "not trusted"
+        case .notRequired: return L("no project resources")
+        case .asked: return L("waiting for you")
+        case .untrusted: return L("not trusted")
         case .unknown: return "unknown"
         }
     }
@@ -213,9 +213,9 @@ struct ComposerAccessControl: View {
         case .trusted, .notRequired, .unknown:
             return nil
         case .asked:
-            return "PiCode asked Pi for the resources this project declares and has not had an answer yet."
+            return L("PiCode asked Pi for the resources this project declares and has not had an answer yet.")
         case .untrusted:
-            return "Pi is running with `--no-approve`, so this project's resources are ignored."
+            return L("Pi is running with `--no-approve`, so this project's resources are ignored.")
         }
     }
 }

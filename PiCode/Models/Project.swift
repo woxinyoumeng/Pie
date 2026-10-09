@@ -101,7 +101,7 @@ struct SessionRef: Identifiable, Equatable {
         if let firstUserMessage, !firstUserMessage.isEmpty {
             return firstUserMessage.oneLinePreview(limit: 48)
         }
-        return "New session"
+        return L("New session")
     }
 
     var isNamed: Bool {
@@ -177,14 +177,14 @@ struct GitFileChange: Identifiable, Equatable, Hashable {
 
         var label: String {
             switch self {
-            case .modified: return "Modified"
-            case .added: return "Added"
-            case .deleted: return "Deleted"
-            case .renamed: return "Renamed"
-            case .copied: return "Copied"
-            case .untracked: return "Untracked"
-            case .conflicted: return "Conflicted"
-            case .typeChanged: return "Type changed"
+            case .modified: return L("Modified")
+            case .added: return L("Added")
+            case .deleted: return L("Deleted")
+            case .renamed: return L("Renamed")
+            case .copied: return L("Copied")
+            case .untracked: return L("Untracked")
+            case .conflicted: return L("Conflicted")
+            case .typeChanged: return L("Type changed")
             }
         }
 
@@ -235,11 +235,11 @@ enum ConnectionState: Equatable {
 
     var label: String {
         switch self {
-        case .idle: return "Not started"
-        case .starting: return "Starting"
-        case .connected: return "Connected"
-        case .disconnected: return "Disconnected"
-        case .failed: return "Failed"
+        case .idle: return L("Not started")
+        case .starting: return L("Starting")
+        case .connected: return L("Connected")
+        case .disconnected: return L("Disconnected")
+        case .failed: return L("Failed")
         }
     }
 
@@ -263,13 +263,13 @@ enum AgentRuntimeState: Equatable {
 
     var label: String {
         switch self {
-        case .starting: return "Starting"
-        case .idle: return "Idle"
-        case .working: return "Working"
-        case .compacting: return "Compacting"
+        case .starting: return L("Starting")
+        case .idle: return L("Idle")
+        case .working: return L("Working")
+        case .compacting: return L("Compacting")
         case .retrying(let attempt, let maxAttempts, _): return "Retrying \(attempt)/\(maxAttempts)"
         case .stopping: return "Stopping"
-        case .disconnected: return "Disconnected"
+        case .disconnected: return L("Disconnected")
         }
     }
 
@@ -300,11 +300,11 @@ enum ProjectTrustState: Equatable {
 
     var label: String {
         switch self {
-        case .notRequired: return "No project resources"
-        case .unknown: return "Not evaluated"
+        case .notRequired: return L("No project resources")
+        case .unknown: return L("Not evaluated")
         case .trusted: return "Trusted"
         case .untrusted: return "Not trusted"
-        case .asked: return "Needs decision"
+        case .asked: return L("Needs decision")
         }
     }
 

@@ -412,8 +412,8 @@ final class PiSessionController {
         var label: String {
             switch self {
             case .automatic: return "Send"
-            case .steer: return "Queue as steering"
-            case .followUp: return "Queue as follow-up"
+            case .steer: return L("Queue as steering")
+            case .followUp: return L("Queue as follow-up")
             }
         }
     }

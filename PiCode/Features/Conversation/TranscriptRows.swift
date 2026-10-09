@@ -83,10 +83,10 @@ enum QuietFamily: String, CaseIterable {
     /// `pluralLabel`.
     var label: String {
         switch self {
-        case .command: return "Ran command"
-        case .edit: return "Edited file"
-        case .read: return "Read file"
-        case .thinking: return "Thinking"
+        case .command: return L("Ran command")
+        case .edit: return L("Edited file")
+        case .read: return L("Read file")
+        case .thinking: return L("Thinking")
         }
     }
 
@@ -97,10 +97,10 @@ enum QuietFamily: String, CaseIterable {
     /// family with what it touched.
     var stepLabel: String {
         switch self {
-        case .command: return "Ran command"
-        case .edit: return "Edited file"
-        case .read: return "Read file"
-        case .thinking: return "Thinking"
+        case .command: return L("Ran command")
+        case .edit: return L("Edited file")
+        case .read: return L("Read file")
+        case .thinking: return L("Thinking")
         }
     }
 
@@ -108,10 +108,10 @@ enum QuietFamily: String, CaseIterable {
     /// singular, and reasoning reads the same however much of it there is.
     var pluralLabel: String {
         switch self {
-        case .command: return "Ran commands"
-        case .edit: return "Edited files"
-        case .read: return "Read files"
-        case .thinking: return "Thinking"
+        case .command: return L("Ran commands")
+        case .edit: return L("Edited files")
+        case .read: return L("Read files")
+        case .thinking: return L("Thinking")
         }
     }
 

@@ -582,19 +582,19 @@ struct PiSessionEntry: Identifiable, Equatable {
         case "message":
             guard let message else { return "message" }
             switch message.role {
-            case "user": return "User: " + message.textContent.oneLinePreview(limit: 80)
-            case "assistant": return "Assistant: " + message.textContent.oneLinePreview(limit: 80)
+            case "user": return L("User: ") + message.textContent.oneLinePreview(limit: 80)
+            case "assistant": return L("Assistant: ") + message.textContent.oneLinePreview(limit: 80)
             case "toolResult": return "Tool result: \(message.toolName ?? "tool")"
-            case "bashExecution": return "Bash: " + (message.command ?? "").oneLinePreview(limit: 60)
-            case "branchSummary": return "Branch summary"
-            case "compactionSummary": return "Compaction summary"
+            case "bashExecution": return L("Bash: ") + (message.command ?? "").oneLinePreview(limit: 60)
+            case "branchSummary": return L("Branch summary")
+            case "compactionSummary": return L("Compaction summary")
             case "custom": return "Extension: \(message.customType ?? "custom")"
             default: return message.role
             }
         case "model_change": return "Model: \(provider ?? "?")/\(modelId ?? "?")"
         case "thinking_level_change": return "Thinking: \(thinkingLevel ?? "?")"
         case "compaction": return "Compaction (\(tokensBefore ?? 0) tokens before)"
-        case "branch_summary": return "Branch summary"
+        case "branch_summary": return L("Branch summary")
         case "custom": return "Extension state: \(customType ?? "custom")"
         case "custom_message": return "Extension message: \(customType ?? "custom")"
         case "label": return "Label: \(label ?? "(cleared)")"

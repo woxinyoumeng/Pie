@@ -32,15 +32,15 @@ enum PiPackageService {
 
         var label: String {
             switch self {
-            case .user: return "This Mac"
-            case .project: return "This project"
+            case .user: return L("This Mac")
+            case .project: return L("This project")
             }
         }
 
         var detail: String {
             switch self {
-            case .user: return "Pi's user settings (~/.pi/agent/settings.json)"
-            case .project: return "The project's .pi/settings.json"
+            case .user: return L("Pi's user settings (~/.pi/agent/settings.json)")
+            case .project: return L("The project's .pi/settings.json")
             }
         }
     }
@@ -87,7 +87,7 @@ enum PiPackageService {
         var errorDescription: String? {
             switch self {
             case .piMissing:
-                return "Pi was not found, so packages cannot be installed or removed."
+                return L("Pi was not found, so packages cannot be installed or removed.")
             case .commandFailed(let command, let output):
                 let detail = output.trimmingCharacters(in: .whitespacesAndNewlines)
                 return detail.isEmpty
