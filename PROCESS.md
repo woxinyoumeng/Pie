@@ -1,5 +1,6 @@
 # PiCode — build & handoff notes
 
+[English](PROCESS.md) · [简体中文](PROCESS.zh-CN.md)
 > Living document. If you are a coding agent picking this up: **read this file
 > first, then `README.md` (the original product spec)**. Update this file as you
 > go — it is the only place where the reasoning that isn't visible in the code
