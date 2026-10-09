@@ -65,7 +65,7 @@ struct SidebarHeader: View {
         // geometry) around. Capped so it never crowds the trailing buttons.
         .fixedSize(horizontal: false, vertical: true)
         .frame(maxWidth: 160, alignment: .leading)
-        .help(currentHarness.displayName + " — the harness new chats run on")
+        .help(String(format: L("%@ — the harness new chats run on"), currentHarness.displayName))
     }
 
     private var currentHarness: HarnessDescriptor {

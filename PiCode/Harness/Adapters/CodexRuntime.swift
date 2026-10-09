@@ -29,7 +29,7 @@ final class CodexRuntime: BufferedAgentRuntime {
         // No long-lived process: each turn is its own `codex exec`. Startup only
         // verifies this adapter can run, so the controller can connect.
         guard FileManager.default.isExecutableFile(atPath: installation.executableURL.path) else {
-            throw AgentRuntimeError.failed("Codex executable not found at \(installation.displayPath).")
+            throw AgentRuntimeError.failed(String(format: L("Codex executable not found at %@."), installation.displayPath))
         }
     }
 
@@ -145,14 +145,14 @@ final class CodexRuntime: BufferedAgentRuntime {
             process = nil
             // A normal per-turn exit is expected; only an abnormal one is an error.
             if !completedTurn, turnActive, code != 0 {
-                onStderr?("Codex exited with status \(code).")
+                onStderr?(String(format: L("Codex exited with status %lld."), code))
                 finishTurn()
             }
             _ = reason
         case .writeFailed(let message):
-            onProtocolError?("Failed to write to Codex: \(message)")
+            onProtocolError?(String(format: L("Failed to write to Codex: %@"), message))
         case .protocolOverflow:
-            onProtocolError?("A Codex record exceeded the maximum size.")
+            onProtocolError?(L("A Codex record exceeded the maximum size."))
         }
     }
 
@@ -178,10 +178,10 @@ final class CodexRuntime: BufferedAgentRuntime {
             finishTurn()
         case "turn.failed":
             completedTurn = true
-            onStderr?(json.object("error")?.string("message") ?? "Codex turn failed.")
+            onStderr?(json.object("error")?.string("message") ?? L("Codex turn failed."))
             finishTurn()
         case "error":
-            onStderr?(json.string("message") ?? "Codex reported an error.")
+            onStderr?(json.string("message") ?? L("Codex reported an error."))
         default:
             break
         }

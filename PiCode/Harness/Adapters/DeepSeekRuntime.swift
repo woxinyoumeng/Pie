@@ -171,7 +171,7 @@ final class DeepSeekRuntime: BufferedAgentRuntime {
             }
             if timeout.isFinite {
                 DispatchQueue.global(qos: .utility).asyncAfter(deadline: .now() + timeout) { [weak self] in
-                    self?.failPending(id: id, error: AgentRuntimeError.failed("`\(method)` timed out."))
+                    self?.failPending(id: id, error: AgentRuntimeError.failed(String(format: L("`%@` timed out."), method)))
                 }
             }
         }
@@ -211,7 +211,7 @@ final class DeepSeekRuntime: BufferedAgentRuntime {
         switch processEvent {
         case .stdoutRecord(let data):
             guard let json = try? JSONCoding.decode(data) else {
-                onProtocolError?("DeepSeek Harness emitted a non-JSON line.")
+                onProtocolError?(L("DeepSeek Harness emitted a non-JSON line."))
                 return
             }
             if recordsPayloads { onPayloadRecord?("← \(json.prettyDescription)") }
@@ -224,9 +224,9 @@ final class DeepSeekRuntime: BufferedAgentRuntime {
             failAllPending(AgentRuntimeError.notRunning)
             onExit?(code, reason)
         case .writeFailed(let message):
-            onProtocolError?("Failed to write to DeepSeek Harness: \(message)")
+            onProtocolError?(String(format: L("Failed to write to DeepSeek Harness: %@"), message))
         case .protocolOverflow:
-            onProtocolError?("A DeepSeek Harness record exceeded the maximum size.")
+            onProtocolError?(L("A DeepSeek Harness record exceeded the maximum size."))
         }
     }
 

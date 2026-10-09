@@ -30,7 +30,7 @@ struct WelcomeView: View {
     var body: some View {
         VStack(spacing: 22) {
             BuildPromptHero(projectName: state.selectedProject?.name)
-            Button(state.selectedProject == nil ? "Open a project folder" : "New chat") {
+            Button(L(state.selectedProject == nil ? "Open a project folder" : "New chat")) {
                 if let project = state.selectedProject?.path {
                     Task { await state.startNewSession(projectPath: project) }
                 } else {

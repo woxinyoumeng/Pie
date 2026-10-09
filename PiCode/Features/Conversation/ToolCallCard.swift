@@ -90,7 +90,7 @@ struct ToolCallCard: View {
                         .foregroundStyle(.secondary)
                 }
                 .buttonStyle(.light)
-                .help(isInputExpanded ? "Hide arguments" : "Show arguments")
+                .help(L(isInputExpanded ? "Hide arguments" : "Show arguments"))
             }
 
             if item.toolDetails != nil, !(item.toolDetails?.isNull ?? true) {
@@ -102,7 +102,7 @@ struct ToolCallCard: View {
                         .foregroundStyle(.secondary)
                 }
                 .buttonStyle(.light)
-                .help(isDetailsExpanded ? "Hide structured result" : "Show structured result")
+                .help(L(isDetailsExpanded ? "Hide structured result" : "Show structured result"))
             }
 
             CopyButton(text: copyText, help: "Copy tool output")

@@ -128,10 +128,10 @@ struct UpdateButton: View {
 
     private func helpText(_ release: AppUpdater.Release) -> String {
         switch updater.state {
-        case .downloading(_, let p): "Downloading \(release.version)… \(Int(p * 100))%"
-        case .installing: "Installing \(release.version)…"
-        case .failed(_, let message): "Update failed: \(message). Click to retry."
-        default: "Update to \(release.version) — click to install and restart"
+        case .downloading(_, let p): String(format: L("Downloading %@… %lld%%"), release.version, Int(p * 100))
+        case .installing: String(format: L("Installing %@…"), release.version)
+        case .failed(_, let message): String(format: L("Update failed: %@. Click to retry."), message)
+        default: String(format: L("Update to %@ — click to install and restart"), release.version)
         }
     }
 }

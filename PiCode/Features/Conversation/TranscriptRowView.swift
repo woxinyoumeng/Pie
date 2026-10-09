@@ -211,7 +211,7 @@ struct TranscriptRowView: View {
                 IconsaxIcon(name: "setting-4")
                     .font(Typography.notice)
                     .foregroundStyle(.secondary)
-                Text("Tool result\(item.toolName.map { ": \($0)" } ?? "")")
+                Text(item.toolName.map { String(format: L("Tool result: %@"), $0) } ?? L("Tool result"))
                     .font(Typography.noticeSemibold)
                     .foregroundStyle(.secondary)
                 Spacer(minLength: 0)

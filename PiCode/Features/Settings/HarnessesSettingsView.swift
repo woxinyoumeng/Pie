@@ -41,8 +41,8 @@ struct HarnessesSettingsView: View {
                 SettingsRow(
                     "Add Harness",
                     detail: availableDescriptors.isEmpty
-                        ? "All supported harnesses are installed."
-                        : "Add another supported harness without showing uninstalled runtimes in the main list."
+                        ? L("All supported harnesses are installed.")
+                        : L("Add another supported harness without showing uninstalled runtimes in the main list.")
                 ) {
                     Button("Add Harness…") { isAddingHarness = true }
                         .buttonStyle(.settingsPill)
@@ -68,7 +68,13 @@ struct HarnessesSettingsView: View {
         let isDefault = state.preferences.defaultHarnessID == descriptor.id
         let note = descriptor.supportNote.flatMap { descriptor.isBuiltIn ? nil : $0 }
 
-        SettingsRow(descriptor.displayName, detail: [descriptor.tagline, note].compactMap { $0 }.joined(separator: "\n")) {
+        // tagline / supportNote 是 String 上下文,先各自查表再拼接;拼好的整串
+        // 交给 SettingsRow 时不会再命中,于是原样展示。
+        let detail = [descriptor.tagline, note]
+            .compactMap { $0 }
+            .map { L($0) }
+            .joined(separator: "\n")
+        SettingsRow(descriptor.displayName, detail: detail) {
             HStack(spacing: 6) {
                 if descriptor.isBuiltIn { badge("Built-in") }
                 if isDefault && descriptor.hasAdapter { badge("Default") }
@@ -83,7 +89,7 @@ struct HarnessesSettingsView: View {
                     updateStatus(for: descriptor.id)
                     Text(installation.version).foregroundStyle(.secondary)
                     if case .available = updates.status(for: descriptor.id) {
-                        Button(state.installs.isInstalling(descriptor.id) ? "Updating…" : "Update") {
+                        Button(L(state.installs.isInstalling(descriptor.id) ? "Updating…" : "Update")) {
                             Task { await state.updateHarness(descriptor) }
                         }
                         .buttonStyle(.settingsPillProminent)
@@ -96,7 +102,7 @@ struct HarnessesSettingsView: View {
         SettingsRow("Actions") {
             HStack(spacing: 8) {
                 if descriptor.hasAdapter {
-                    Button(isDefault ? "Default Harness" : "Set as Default") {
+                    Button(L(isDefault ? "Default Harness" : "Set as Default")) {
                         state.preferences.defaultHarnessID = descriptor.id
                         state.preferences.persist()
                     }
@@ -163,7 +169,7 @@ struct HarnessesSettingsView: View {
     }
 
     private func badge(_ text: String) -> some View {
-        Text(text)
+        Text(L(text))
             .font(.caption2.weight(.medium))
             .padding(.horizontal, 6)
             .padding(.vertical, 2)
@@ -205,10 +211,10 @@ private struct AddHarnessSheet: View {
                                 .foregroundStyle(.secondary)
                             HStack(spacing: 8) {
                                 ForEach(descriptor.installMethods) { method in
-                                    Button("Install with \(method.label)") {
+                                    Button(String(format: L("Install with %@"), method.label)) {
                                         onInstall(descriptor, method)
                                     }
-                                    CopyButton(text: method.command, help: "Copy \(method.label) install command")
+                                    CopyButton(text: method.command, help: String(format: L("Copy %@ install command"), method.label))
                                 }
                             }
                         }
@@ -244,7 +250,7 @@ private struct InstallLogSheet: View {
             .padding(12)
             Divider()
             ScrollView {
-                Text(run?.output.isEmpty == false ? run!.output : "Waiting for output…")
+                Text(run?.output.isEmpty == false ? run!.output : L("Waiting for output…"))
                     .font(.system(.caption, design: .monospaced))
                     .textSelection(.enabled)
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -299,7 +305,7 @@ struct UpdateAllHarnessesButton: View {
         let pending = state.harnessesWithUpdates
         let isUpdating = pending.contains { state.installs.isInstalling($0.id) }
         if !pending.isEmpty {
-            Button(isUpdating ? "Updating…" : "Update all (\(pending.count))") {
+            Button(isUpdating ? L("Updating…") : String(format: L("Update all (%lld)"), pending.count)) {
                 Task { await state.updateAllHarnesses() }
             }
             .buttonStyle(.settingsPillProminent)

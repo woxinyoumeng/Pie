@@ -108,7 +108,7 @@ struct SessionView: View {
             if let notice = controller.compatibilityNotices.last {
                 BannerView(
                     level: .info,
-                    title: "Pi offered a surface PiCode cannot render: \(notice.surface)",
+                    title: String(format: L("Pi offered a surface PiCode cannot render: %@"), notice.surface),
                     message: notice.detail
                 )
             }
@@ -279,16 +279,16 @@ struct SessionView: View {
             level: .warning,
             title: connectionTitle,
             message: connectionMessage,
-            actionTitle: "Restart \(controller.harness.displayName)",
+            actionTitle: String(format: L("Restart %@"), controller.harness.displayName),
             action: { Task { await controller.restart() } }
         )
     }
 
     private var connectionTitle: String {
         switch controller.connection {
-        case .failed: return "\(controller.harness.displayName) could not start"
+        case .failed: return String(format: L("%@ could not start"), controller.harness.displayName)
         case .disconnected(let reason):
-            return "\(controller.harness.displayName) stopped\(reason.map { " (\($0))" } ?? "")"
+            return String(format: L("%@ stopped%@"), controller.harness.displayName, reason.map { " (\($0))" } ?? "")
         default: return controller.connection.label
         }
     }

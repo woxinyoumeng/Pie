@@ -38,8 +38,13 @@ extension Label where Title == Text, Icon == Image {
         self.init { Text(titleKey) } icon: { iconsaxImage(name) }
     }
 
+    /// `String` 版本必须显式经过 `L(_:)`。
+    ///
+    /// 字面量在重载解析里会命中这个泛型重载(而不是 `LocalizedStringKey` 那个,
+    /// 实验已证实:`Label("New chat", iconsax:)` 走的是这里),而 `Text(String)`
+    /// 不做本地化查找 —— 菜单项因此一直是英文。
     init<S: StringProtocol>(_ title: S, iconsax name: String) {
-        self.init { Text(title) } icon: { iconsaxImage(name) }
+        self.init { Text(L(String(title))) } icon: { iconsaxImage(name) }
     }
 }
 

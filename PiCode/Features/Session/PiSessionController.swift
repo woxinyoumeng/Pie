@@ -321,14 +321,14 @@ final class PiSessionController {
             connection = .failed(message: error.localizedDescription)
             runtime = .disconnected
             lastError = error.localizedDescription
-            record(kind: .connection, title: "Could not start \(harness.displayName)",
+            record(kind: .connection, title: String(format: L("Could not start %@"), harness.displayName),
                    detail: error.localizedDescription, isError: true)
             return
         }
 
         connection = .connected
         runtime = .idle
-        record(kind: .connection, title: "Connected to \(harness.displayName) \(piVersion)")
+        record(kind: .connection, title: String(format: L("Connected to %@ %@"), harness.displayName, piVersion))
         beginLocalHistoryLoad()
         await refreshAll()
         await refreshGit(immediately: true)
@@ -692,7 +692,7 @@ final class PiSessionController {
             resetSessionState()
             sessionFile = path
             sessionId = Self.sessionID(fromFile: path)
-            record(kind: .sessionChange, title: "Opened \(URL(fileURLWithPath: path).lastPathComponent)")
+            record(kind: .sessionChange, title: String(format: L("Opened %@"), URL(fileURLWithPath: path).lastPathComponent))
             await refreshAll()
         } catch {
             report(error, context: "Switching sessions failed")
@@ -839,7 +839,7 @@ final class PiSessionController {
             // harness-aware session path. It must never receive an OMP model.
             if harness.id == .pi { preferences.defaultModelQualifiedID = model.qualifiedID }
             preferences.persist()
-            record(kind: .sessionChange, title: "Model set to \(model.displayName)")
+            record(kind: .sessionChange, title: String(format: L("Model set to %@"), model.displayName))
             await refreshState()
             await refreshThinkingLevels()
         } catch {
@@ -851,7 +851,7 @@ final class PiSessionController {
         do {
             let response = try await request(.cycleModel)
             if let modelJSON = response.data?["model"], let model = PiModel(json: modelJSON) {
-                record(kind: .sessionChange, title: "Model cycled to \(model.displayName)")
+                record(kind: .sessionChange, title: String(format: L("Model cycled to %@"), model.displayName))
             } else if response.data?["model"]?.isNull ?? true {
                 record(kind: .sessionChange, title: "Only one model is available")
             }
@@ -868,7 +868,7 @@ final class PiSessionController {
             preferences.defaultThinkingLevel = level
             preferences.persist()
             await refreshState()
-            record(kind: .sessionChange, title: "Thinking level set to \(level)")
+            record(kind: .sessionChange, title: String(format: L("Thinking level set to %@"), level))
         } catch {
             report(error, context: "Setting the thinking level failed")
         }
@@ -878,7 +878,7 @@ final class PiSessionController {
         do {
             let response = try await request(.cycleThinkingLevel)
             if let level = response.data?.string("level") {
-                record(kind: .sessionChange, title: "Thinking level cycled to \(level)")
+                record(kind: .sessionChange, title: String(format: L("Thinking level cycled to %@"), level))
             }
             await refreshState()
         } catch {
@@ -908,7 +908,7 @@ final class PiSessionController {
         do {
             try await request(.setAutoCompaction(enabled: enabled))
             await refreshState()
-            record(kind: .sessionChange, title: "Auto-compaction \(enabled ? "enabled" : "disabled")")
+            record(kind: .sessionChange, title: L(enabled ? "Auto-compaction enabled" : "Auto-compaction disabled"))
         } catch {
             report(error, context: "Changing auto-compaction failed")
         }
@@ -918,7 +918,7 @@ final class PiSessionController {
         do {
             try await request(.setAutoRetry(enabled: enabled))
             await refreshState()
-            record(kind: .sessionChange, title: "Auto-retry \(enabled ? "enabled" : "disabled")")
+            record(kind: .sessionChange, title: L(enabled ? "Auto-retry enabled" : "Auto-retry disabled"))
         } catch {
             report(error, context: "Changing auto-retry failed")
         }
@@ -1206,7 +1206,7 @@ final class PiSessionController {
     // MARK: - Process-level failures
 
     private func handleExit(code: Int32, reason: Process.TerminationReason) {
-        let reasonText = exitReason ?? (reason == .uncaughtSignal ? "signal" : "exit code \(code)")
+        let reasonText = exitReason ?? (reason == .uncaughtSignal ? L("signal") : String(format: L("exit code %lld"), code))
         connection = .disconnected(reason: reasonText)
         runtime = .disconnected
         isStreaming = false
@@ -1311,7 +1311,7 @@ final class PiSessionController {
         case .turnEnd(_, let toolResults):
             lastTurnDuration = currentTurnStartedAt.map { Date().timeIntervalSince($0) }
             record(kind: .turn, title: "Turn finished",
-                   detail: toolResults.isEmpty ? nil : "\(toolResults.count) tool result(s)")
+                   detail: toolResults.isEmpty ? nil : String(format: L("%lld tool result(s)"), toolResults.count))
 
         case .messageStart(let message):
             if message.isAssistant {
@@ -1376,13 +1376,13 @@ final class PiSessionController {
         case .queueUpdate(let steering, let followUp):
             queue.update(steering: steering, followUp: followUp)
             record(kind: .queue, title: "Queue changed",
-                   detail: "\(steering.count) steering, \(followUp.count) follow-up")
+                   detail: String(format: L("%lld steering, %lld follow-up"), steering.count, followUp.count))
 
         case .compactionStart(let reason):
             isCompacting = true
             liveCompaction = true
             runtime = .compacting
-            record(kind: .compaction, title: "Compacting context", detail: "Reason: \(reason)")
+            record(kind: .compaction, title: "Compacting context", detail: String(format: L("Reason: %@"), reason))
             recomposeItems()
 
         case .compactionEnd(let reason, let result, let aborted, let errorMessage, let willRetry):
@@ -1391,9 +1391,9 @@ final class PiSessionController {
             runtime = willRetry ? .working : .idle
             if let errorMessage {
                 record(kind: .error, title: "Compaction failed", detail: errorMessage, isError: true)
-                notifications.append(ExtensionNotification(message: "Compaction failed: \(errorMessage)", level: .error))
+                notifications.append(ExtensionNotification(message: String(format: L("Compaction failed: %@"), errorMessage), level: .error))
             } else if aborted {
-                record(kind: .compaction, title: "Compaction aborted", detail: "Reason: \(reason)")
+                record(kind: .compaction, title: "Compaction aborted", detail: String(format: L("Reason: %@"), reason))
             } else if let result {
                 record(kind: .compaction, title: "Compacted context",
                        detail: "\(Format.tokens(result.tokensBefore ?? 0)) → \(Format.tokens(result.estimatedTokensAfter ?? 0)) tokens")

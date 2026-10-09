@@ -110,7 +110,7 @@ struct ComposerModelPicker: View {
                     let isCurrent = descriptor.id == controller.harness.id
                     selectionRow(
                         title: descriptor.displayName,
-                        subtitle: isCurrent ? "Current chat" : "Start a new chat on \(descriptor.displayName)",
+                        subtitle: isCurrent ? L("Current chat") : String(format: L("Start a new chat on %@"), descriptor.displayName),
                         isSelected: isCurrent
                     ) {
                         selectHarness(descriptor)
@@ -120,7 +120,7 @@ struct ComposerModelPicker: View {
             .padding(.vertical, 4)
         }
         .safeAreaInset(edge: .bottom) {
-            footnote("A harness is fixed for a chat. Choosing another starts a new chat on it; this conversation stays on \(controller.harness.displayName).")
+            footnote(String(format: L("A harness is fixed for a chat. Choosing another starts a new chat on it; this conversation stays on %@."), controller.harness.displayName))
         }
     }
 
@@ -129,9 +129,9 @@ struct ComposerModelPicker: View {
             VStack(alignment: .leading, spacing: 0) {
                 if providers.isEmpty {
                     if let error = controller.modelCatalogError {
-                        note("\(controller.harness.displayName) could not load its models: \(error)")
+                        note(String(format: L("%@ could not load its models: %@"), controller.harness.displayName, error))
                     } else {
-                        note("\(controller.harness.displayName) did not return any providers. Configure one in Settings → Providers, then reopen this menu.")
+                        note(String(format: L("%@ did not return any providers. Configure one in Settings → Providers, then reopen this menu."), controller.harness.displayName))
                     }
                 } else {
                     ForEach(providers, id: \.self) { provider in
@@ -173,7 +173,7 @@ struct ComposerModelPicker: View {
                 LazyVStack(alignment: .leading, spacing: 0, pinnedViews: [.sectionHeaders]) {
                     if filteredModels.isEmpty {
                         ContentUnavailableView(
-                            query.isEmpty ? "No models available" : "No matching models",
+                            query.isEmpty ? L("No models available") : L("No matching models"),
                             systemImage: "search-normal",
                             description: Text(emptyDescription)
                         )
@@ -430,7 +430,7 @@ struct ComposerModelPicker: View {
 
     private var emptyDescription: String {
         if query.isEmpty {
-            return "\(controller.harness.displayName) did not return any compatible models."
+            return String(format: L("%@ did not return any compatible models."), controller.harness.displayName)
         }
         return L("Try a provider, model name, or qualified model ID.")
     }

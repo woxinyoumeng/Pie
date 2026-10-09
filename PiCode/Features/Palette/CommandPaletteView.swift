@@ -136,7 +136,7 @@ struct CommandPaletteView: View {
                     }
 
                     if commands.isEmpty && state.paletteProjectResults.isEmpty && state.paletteResults.isEmpty {
-                        Text(state.paletteQuery.isEmpty ? "Type to filter." : "No matches.")
+                        Text(state.paletteQuery.isEmpty ? L("Type to filter.") : L("No matches."))
                             .font(.callout)
                             .foregroundStyle(.secondary)
                             .padding(14)

@@ -180,7 +180,7 @@ final class ClaudeCodeRuntime: BufferedAgentRuntime {
         switch processEvent {
         case .stdoutRecord(let data):
             guard let json = try? JSONCoding.decode(data) else {
-                onProtocolError?("Claude Code emitted a non-JSON line.")
+                onProtocolError?(L("Claude Code emitted a non-JSON line."))
                 return
             }
             if recordsPayloads { onPayloadRecord?("← \(json.prettyDescription)") }
@@ -190,9 +190,9 @@ final class ClaudeCodeRuntime: BufferedAgentRuntime {
         case .exited(let code, let reason):
             onExit?(code, reason)
         case .writeFailed(let message):
-            onProtocolError?("Failed to write to Claude Code: \(message)")
+            onProtocolError?(String(format: L("Failed to write to Claude Code: %@"), message))
         case .protocolOverflow:
-            onProtocolError?("A Claude Code record exceeded the maximum size.")
+            onProtocolError?(L("A Claude Code record exceeded the maximum size."))
         }
     }
 

@@ -275,10 +275,10 @@ struct ConversationView: View {
     private var statusFooter: some View {
         VStack(alignment: .leading, spacing: 8) {
             if controller.isCompacting {
-                statusRow(icon: "convert", text: "Compacting conversation context…", showsSpinner: true)
+                statusRow(icon: "convert", text: L("Compacting conversation context…"), showsSpinner: true)
             }
             if let retry = controller.retryDescription {
-                statusRow(icon: "refresh", text: "Retrying: \(retry)", showsSpinner: true)
+                statusRow(icon: "refresh", text: String(format: L("Retrying: %@"), retry), showsSpinner: true)
             }
             if let note = controller.summarizationNote {
                 statusRow(icon: "clock", text: note, showsSpinner: true)

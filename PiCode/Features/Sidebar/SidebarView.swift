@@ -662,15 +662,17 @@ struct ProjectRow: View {
         .onChange(of: isHovering) { _, now in
             if !now { isMenuHovering = false; isNewChatHovering = false }
         }
-        .accessibilityValue(state.isCollapsed(project: project) ? "chats hidden" : "chats shown")
+        .accessibilityValue(L(state.isCollapsed(project: project) ? "chats hidden" : "chats shown"))
         .contextMenu { ProjectRowMenu(state: state, project: project) }
         .help(helpText)
     }
 
     private var helpText: String {
-        let fold = state.isCollapsed(project: project) ? "Click to show its chats" : "Click to hide its chats"
-        let chats = project.sessions.count == 1 ? "1 chat" : "\(project.sessions.count) chats"
-        return "\(project.displayPath) — \(chats). \(fold)."
+        let fold = L(state.isCollapsed(project: project) ? "Click to show its chats" : "Click to hide its chats")
+        let chats = project.sessions.count == 1
+            ? L("1 chat")
+            : String(format: L("%lld chats"), project.sessions.count)
+        return String(format: L("%@ — %@. %@."), project.displayPath, chats, fold)
     }
 }
 
@@ -839,9 +841,11 @@ struct SessionRow: View {
 
     private var helpText: String {
         let location = session.filePath?.abbreviatingHomeDirectory ?? session.cwd.abbreviatingHomeDirectory
-        guard !isEphemeral else { return "\(location) — in memory, not on disk yet" }
-        let messages = session.messageCount > 0 ? "\(session.messageCount) message(s)" : "no messages"
-        return "\(location) — \(messages), updated \(Format.relativeTime(session.updatedAt))"
+        guard !isEphemeral else { return String(format: L("%@ — in memory, not on disk yet"), location) }
+        let messages = session.messageCount > 0
+            ? String(format: L("%lld messages"), session.messageCount)
+            : L("no messages")
+        return String(format: L("%@ — %@, updated %@"), location, messages, Format.relativeTime(session.updatedAt))
     }
 
 }

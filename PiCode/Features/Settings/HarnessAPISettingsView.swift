@@ -24,7 +24,7 @@ final class PiHarnessAPIModel {
         do {
             try PiProviderService.setAPIKey(key, for: provider)
             reload()
-            statusMessage = "Saved \(provider) for Pi."
+            statusMessage = String(format: L("Saved %@ for Pi."), provider)
         } catch {
             lastError = error.localizedDescription
         }
@@ -34,7 +34,7 @@ final class PiHarnessAPIModel {
         do {
             try PiProviderService.removeCredential(for: provider)
             reload()
-            statusMessage = "Removed \(provider) from Pi."
+            statusMessage = String(format: L("Removed %@ from Pi."), provider)
         } catch {
             lastError = error.localizedDescription
         }
@@ -44,7 +44,7 @@ final class PiHarnessAPIModel {
         do {
             let removed = try PiProviderService.removeUnreadableEntries()
             reload()
-            statusMessage = removed.isEmpty ? "Nothing to repair." : "Removed: \(removed.joined(separator: ", "))."
+            statusMessage = removed.isEmpty ? L("Nothing to repair.") : String(format: L("Removed: %@."), removed.joined(separator: ", "))
         } catch {
             lastError = error.localizedDescription
         }
@@ -71,7 +71,7 @@ struct HarnessAPISettingsView: View {
                 HStack(spacing: 8) {
                     Button("Open Terminal") {
                         _ = WorkspaceLauncher.openTerminal(at: NSHomeDirectory())
-                        state.showToast("Run `omp`, then `/login` to configure Oh My Pi accounts.")
+                        state.showToast(L("Run `omp`, then `/login` to configure Oh My Pi accounts."))
                     }
                     .controlSize(.small)
                     CopyButton(text: "omp", help: "Copy the Oh My Pi command")
@@ -119,7 +119,7 @@ private struct PiHarnessAPISettingsView: View {
                 }
             }
             if !model.problems.isEmpty {
-                Label("Pi cannot read \(model.problems.count) credential entr\(model.problems.count == 1 ? "y" : "ies").", iconsax: "warning-2")
+                Label(String(format: L("Pi cannot read %lld credential entries."), model.problems.count), iconsax: "warning-2")
                     .font(.caption)
                     .foregroundStyle(.orange)
                 HStack {

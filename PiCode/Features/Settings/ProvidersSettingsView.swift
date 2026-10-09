@@ -30,7 +30,7 @@ final class ProvidersModel {
             try ProviderRegistry.save(providers)
             try onProvidersChanged?(providers)
             reload()
-            statusMessage = "Saved \(providers.count) provider(s)."
+            statusMessage = String(format: L("Saved %lld provider(s)."), providers.count)
         } catch {
             lastError = error.localizedDescription
         }
@@ -38,7 +38,7 @@ final class ProvidersModel {
 
     func removeCustomProvider(id: String) {
         saveCustomProviders(customProviders.filter { $0.id != id })
-        statusMessage = "Removed the custom provider “\(id)”."
+        statusMessage = String(format: L("Removed the custom provider “%@”."), id)
     }
 }
 
@@ -129,7 +129,7 @@ struct ProvidersSettingsView: View {
                                     .background(.quaternary, in: Capsule())
                             }
                         }
-                        Text([provider.api, provider.baseURL, "\(provider.models.count) model(s)"]
+                        Text([provider.api, provider.baseURL, String(format: L("%lld model(s)"), provider.models.count)]
                             .compactMap { $0 }
                             .joined(separator: " · "))
                             .font(.caption)
@@ -190,7 +190,7 @@ struct CustomProviderSheet: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Text(provider == nil ? "Add a provider" : "Edit \(provider?.id ?? "")")
+            Text(provider == nil ? L("Add a provider") : String(format: L("Edit %@"), provider?.id ?? ""))
                 .font(.headline)
             Form {
                 if provider == nil {
@@ -203,7 +203,7 @@ struct CustomProviderSheet: View {
                         applyPreset(ProviderPresets.preset(id: newValue))
                     }
                     if let note = ProviderPresets.preset(id: presetID).note {
-                        Text(note)
+                        Text(L(note))
                             .font(.caption)
                             .foregroundStyle(.secondary)
                             .fixedSize(horizontal: false, vertical: true)

@@ -102,7 +102,7 @@ final class PackagesModel {
                 installation: installation
             )
             reloadInstalled(projectPath: projectPath)
-            statusMessage = "Installed \(trimmed). Restart a session to load its extensions."
+            statusMessage = String(format: L("Installed %@. Restart a session to load its extensions."), trimmed)
         } catch {
             lastError = error.localizedDescription
         }
@@ -129,7 +129,7 @@ final class PackagesModel {
                 installation: installation
             )
             reloadInstalled(projectPath: projectPath)
-            statusMessage = "Removed \(package.source)."
+            statusMessage = String(format: L("Removed %@."), package.source)
         } catch {
             lastError = error.localizedDescription
         }

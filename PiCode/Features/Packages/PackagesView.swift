@@ -94,7 +94,7 @@ struct PackagesView: View {
             Button("Cancel", role: .cancel) { pendingRemoval = nil }
         } message: {
             if let package = pendingRemoval {
-                Text("PiCode asks Pi to remove `\(package.source)` from \(package.scope.detail). Pi and the terminal lose it too.")
+                Text(String(format: L("PiCode asks Pi to remove `%1$@` from %2$@. Pi and the terminal lose it too."), package.source, package.scope.detail))
             }
         }
     }
@@ -207,7 +207,7 @@ struct PackagesView: View {
                 "Installed",
                 subtitle: model.installed.isEmpty
                     ? "Nothing installed yet"
-                    : "\(model.installed.count) package\(model.installed.count == 1 ? "" : "s") Pi will load"
+                    : String(format: L("%lld packages Pi will load"), model.installed.count)
             )
 
             if model.installed.isEmpty {
@@ -241,7 +241,7 @@ struct PackagesView: View {
                 "Browse",
                 subtitle: model.query.trimmingCharacters(in: .whitespaces).isEmpty
                     ? "Popular packages tagged pi-package on npm"
-                    : "npm results for “\(model.query)”"
+                    : String(format: L("npm results for “%@”"), model.query)
             )
 
             if model.results.isEmpty {
@@ -304,7 +304,7 @@ struct PackagesView: View {
     }
 
     private func emptyRow(_ text: String) -> some View {
-        Text(text)
+        Text(L(text))
             .font(Typography.body)
             .foregroundStyle(.secondary)
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -464,7 +464,7 @@ private struct InstallPackageSheet: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 14) {
-            Text(package == nil ? "Install a Pi package" : "Install \(package?.name ?? "")")
+            Text(package == nil ? L("Install a Pi package") : String(format: L("Install %@"), package?.name ?? ""))
                 .font(.headline)
 
             if let package {

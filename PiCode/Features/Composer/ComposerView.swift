@@ -433,7 +433,7 @@ struct ComposerView: View {
         panel.canChooseFiles = true
         panel.canChooseDirectories = false
         panel.allowsMultipleSelection = true
-        panel.message = "Images are sent to Pi as image content. Text files are inlined as @path references."
+        panel.message = L("Images are sent to Pi as image content. Text files are inlined as @path references.")
         guard panel.runModal() == .OK else { return }
         addAttachments(panel.urls)
     }
@@ -451,7 +451,7 @@ struct ComposerView: View {
             }
         }
         if !failures.isEmpty {
-            attachmentError = failures.joined(separator: "\n") + " (AppleScript-based and binary formats are not attached.)"
+            attachmentError = failures.joined(separator: "\n") + L(" (AppleScript-based and binary formats are not attached.)")
         }
     }
 
@@ -644,10 +644,10 @@ enum AttachmentLoader {
 
         if FileClassification.isImage(path: path) {
             guard size <= maxImageBytes else {
-                return .failure(Failure(message: "\(name) is larger than \(ByteCountFormatter.string(fromByteCount: Int64(maxImageBytes), countStyle: .file))."))
+                return .failure(Failure(message: String(format: L("%@ is larger than %@."), name, ByteCountFormatter.string(fromByteCount: Int64(maxImageBytes), countStyle: .file))))
             }
             guard let data = try? Data(contentsOf: url) else {
-                return .failure(Failure(message: "Could not read \(name)."))
+                return .failure(Failure(message: String(format: L("Could not read %@."), name)))
             }
             return .success(Attachment(
                 kind: .image,
@@ -663,11 +663,11 @@ enum AttachmentLoader {
 
         if FileClassification.isTextLike(path: path) {
             guard size <= maxTextBytes else {
-                return .failure(Failure(message: "\(name) is larger than \(ByteCountFormatter.string(fromByteCount: Int64(maxTextBytes), countStyle: .file)). Use an @path reference instead."))
+                return .failure(Failure(message: String(format: L("%@ is larger than %@. Use an @path reference instead."), name, ByteCountFormatter.string(fromByteCount: Int64(maxTextBytes), countStyle: .file))))
             }
             let preview = FilePreviewLoader.load(path: path)
             if let error = preview.error {
-                return .failure(Failure(message: "Could not read \(name): \(error)"))
+                return .failure(Failure(message: String(format: L("Could not read %@: %@"), name, error)))
             }
             return .success(Attachment(
                 kind: .text,
@@ -681,6 +681,6 @@ enum AttachmentLoader {
             ))
         }
 
-        return .failure(Failure(message: "\(name) is not an image or a text file."))
+        return .failure(Failure(message: String(format: L("%@ is not an image or a text file."), name)))
     }
 }

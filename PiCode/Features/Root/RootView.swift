@@ -406,7 +406,7 @@ struct RootView: View {
     @ViewBuilder
     private var toast: some View {
         if let toast = state.toast {
-            Text(toast)
+            Text(L(toast))
                 .font(.callout)
                 .padding(.horizontal, 14)
                 .padding(.vertical, 8)
@@ -665,9 +665,9 @@ struct TitlebarNotificationsButton: View {
         .buttonStyle(.plain)
         .foregroundStyle(state.isShowingNotifications ? Color.primary : Color.secondary)
         .onHover { isHovering = $0 }
-        .help(state.isShowingNotifications ? "Hide notifications" : "Show notifications")
+        .help(L(state.isShowingNotifications ? "Hide notifications" : "Show notifications"))
         .accessibilityLabel(state.unreadNotificationCount > 0
-            ? "Notifications, \(state.unreadNotificationCount) unread"
-            : "Notifications")
+            ? String(format: L("Notifications, %lld unread"), state.unreadNotificationCount)
+            : L("Notifications"))
     }
 }

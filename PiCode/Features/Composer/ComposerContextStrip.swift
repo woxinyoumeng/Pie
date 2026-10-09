@@ -51,7 +51,7 @@ struct ComposerContextStrip: View {
 
     private var projectPicker: some View {
         ContextPickerPopover(
-            searchPrompt: "Search projects",
+            searchPrompt: L("Search projects"),
             heading: nil,
             items: projectItems,
             actions: [ContextPickerAction(title: "New project", systemImage: "add") {
@@ -72,19 +72,19 @@ struct ComposerContextStrip: View {
         let items = branches.map { name in
             ContextPickerItem(
                 id: name, title: name,
-                subtitle: name == current && dirty > 0 ? "Uncommitted: \(dirty) file\(dirty == 1 ? "" : "s")" : nil,
+                subtitle: name == current && dirty > 0 ? String(format: L("Uncommitted: %lld files"), dirty) : nil,
                 systemImage: "hierarchy-2",
                 isSelected: name == current)
         }
         return ContextPickerPopover(
-            searchPrompt: "Search \(controller.projectName) branches",
+            searchPrompt: String(format: L("Search %@ branches"), controller.projectName),
             heading: "Branches",
             items: items,
             onSelect: { item in
                 guard item.id != current else { return }
                 Task {
                     if let error = await controller.switchBranch(to: item.id) {
-                        state.present(error: "Could not switch to \(item.id): \(error)")
+                        state.present(error: String(format: L("Could not switch to %@: %@"), item.id, error))
                     }
                 }
             },

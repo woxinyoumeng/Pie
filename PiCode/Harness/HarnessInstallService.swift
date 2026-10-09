@@ -56,7 +56,7 @@ final class HarnessInstallService {
             command: method.command
         )
         append("$ \(method.command)", to: descriptor.id)
-        append("Running in \(shell)…", to: descriptor.id)
+        append(String(format: L("Running in %@…"), shell), to: descriptor.id)
 
         let plan = HarnessInstallEnvironment.plan(for: method)
         for note in plan.notes {
@@ -80,7 +80,7 @@ final class HarnessInstallService {
             runs[descriptor.id] = run
         }
         processes[descriptor.id] = nil
-        append(exitCode == 0 ? "✓ Finished." : "✗ Exited with status \(exitCode).", to: descriptor.id)
+        append(exitCode == 0 ? L("✓ Finished.") : String(format: L("✗ Exited with status %lld."), exitCode), to: descriptor.id)
         return exitCode == 0
     }
 
@@ -153,7 +153,7 @@ final class HarnessInstallService {
                 self.processes[harnessID] = process
                 try process.run()
             } catch {
-                onLine("Could not start installer: \(error.localizedDescription)")
+                onLine(String(format: L("Could not start installer: %@"), error.localizedDescription))
                 continuation.resume(returning: -1)
             }
         }

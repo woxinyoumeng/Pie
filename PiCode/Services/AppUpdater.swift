@@ -130,7 +130,7 @@ final class AppUpdater {
             state = .installing(release)
             let destination = Bundle.main.bundleURL
             guard FileManager.default.isWritableFile(atPath: destination.deletingLastPathComponent().path) else {
-                throw UpdateError("No write access to \(destination.deletingLastPathComponent().path).")
+                throw UpdateError(String(format: L("No write access to %@."), destination.deletingLastPathComponent().path))
             }
             let extracted = work.appendingPathComponent("extracted", isDirectory: true)
             try FileManager.default.createDirectory(at: extracted, withIntermediateDirectories: true)
@@ -138,10 +138,10 @@ final class AppUpdater {
 
             guard let newApp = try FileManager.default.contentsOfDirectory(at: extracted, includingPropertiesForKeys: nil)
                 .first(where: { $0.pathExtension == "app" })
-            else { throw UpdateError("The download contains no app.") }
+            else { throw UpdateError(L("The download contains no app.")) }
 
             guard Bundle(url: newApp)?.bundleIdentifier == Bundle.main.bundleIdentifier else {
-                throw UpdateError("The download is a different app.")
+                throw UpdateError(L("The download is a different app."))
             }
             try await Self.shell("/usr/bin/codesign", ["--verify", "--deep", "--strict", newApp.path])
             // Downloaded by us, but be explicit so Gatekeeper never prompts on relaunch.
@@ -158,7 +158,7 @@ final class AppUpdater {
     private func download(_ release: Release, to file: URL) async throws {
         let (bytes, response) = try await URLSession.shared.bytes(from: release.assetURL)
         guard (response as? HTTPURLResponse)?.statusCode == 200 else {
-            throw UpdateError("Download failed.")
+            throw UpdateError(L("Download failed."))
         }
         let total = response.expectedContentLength > 0 ? response.expectedContentLength : release.size
         FileManager.default.createFile(atPath: file.path, contents: nil)
@@ -188,7 +188,7 @@ final class AppUpdater {
         if let expected = release.sha256, expected.count == 64 {
             let actual = try await Self.shell("/usr/bin/shasum", ["-a", "256", file.path])
                 .split(separator: " ").first.map(String.init)
-            guard actual == expected else { throw UpdateError("Checksum mismatch.") }
+            guard actual == expected else { throw UpdateError(L("Checksum mismatch.")) }
         }
     }
 
@@ -288,7 +288,7 @@ final class AppUpdater {
                         continuation.resume(returning: String(decoding: output, as: UTF8.self))
                     } else {
                         let message = String(decoding: errors, as: UTF8.self).trimmingCharacters(in: .whitespacesAndNewlines)
-                        continuation.resume(throwing: UpdateError(message.isEmpty ? "\(path) failed." : message))
+                        continuation.resume(throwing: UpdateError(message.isEmpty ? String(format: L("%@ failed."), path) : message))
                     }
                 } catch {
                     continuation.resume(throwing: error)

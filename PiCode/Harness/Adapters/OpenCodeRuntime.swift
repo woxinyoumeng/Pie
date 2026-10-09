@@ -17,7 +17,7 @@ final class OpenCodeRuntime: BufferedAgentRuntime, @unchecked Sendable {
     override func start() throws {
         if sessionIdentifier == nil { sessionIdentifier = sessionFile }
         guard FileManager.default.isExecutableFile(atPath: installation.executableURL.path) else {
-            throw AgentRuntimeError.failed("OpenCode executable not found at \(installation.displayPath).")
+            throw AgentRuntimeError.failed(String(format: L("OpenCode executable not found at %@."), installation.displayPath))
         }
     }
 
@@ -110,14 +110,14 @@ final class OpenCodeRuntime: BufferedAgentRuntime, @unchecked Sendable {
         case .exited(let code, let reason):
             process = nil
             if turnActive && code != 0 {
-                onStderr?("OpenCode exited with status \(code).")
+                onStderr?(String(format: L("OpenCode exited with status %lld."), code))
             }
             if turnActive { finishTurn() }
             _ = reason
         case .writeFailed(let message):
-            onProtocolError?("Failed to communicate with OpenCode: \(message)")
+            onProtocolError?(String(format: L("Failed to communicate with OpenCode: %@"), message))
         case .protocolOverflow:
-            onProtocolError?("An OpenCode event exceeded the maximum size.")
+            onProtocolError?(L("An OpenCode event exceeded the maximum size."))
         }
     }
 
@@ -163,7 +163,7 @@ final class OpenCodeRuntime: BufferedAgentRuntime, @unchecked Sendable {
             break
 
         case "error":
-            onStderr?(json.object("error")?.string("message") ?? json.string("error") ?? "OpenCode reported an error.")
+            onStderr?(json.object("error")?.string("message") ?? json.string("error") ?? L("OpenCode reported an error."))
 
         default:
             break

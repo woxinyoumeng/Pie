@@ -211,8 +211,8 @@ struct DeleteSessionSheet: View {
 
     private var message: String {
         session.filePath == nil
-            ? "This session has not been written to disk yet. Close it instead of deleting it."
-            : "This permanently deletes \(session.displayName) from Pi's session folder."
+            ? L("This session has not been written to disk yet. Close it instead of deleting it.")
+            : String(format: L("This permanently deletes %@ from Pi's session folder."), session.displayName)
     }
 }
 

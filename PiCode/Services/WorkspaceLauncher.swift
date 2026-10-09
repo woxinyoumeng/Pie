@@ -93,13 +93,13 @@ enum WorkspaceLauncher {
         NSWorkspace.shared.open(url)
     }
 
-    static func chooseDirectory(prompt: String = "Choose a project folder") -> String? {
+    static func chooseDirectory(prompt: String = L("Choose a project folder")) -> String? {
         let panel = NSOpenPanel()
         panel.canChooseFiles = false
         panel.canChooseDirectories = true
         panel.allowsMultipleSelection = false
         panel.prompt = prompt
-        panel.message = "PiCode runs `pi` in the folder you choose."
+        panel.message = L("PiCode runs `pi` in the folder you choose.")
         return panel.runModal() == .OK ? panel.url?.path : nil
     }
 

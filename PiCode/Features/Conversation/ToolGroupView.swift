@@ -130,9 +130,9 @@ struct ToolGroupView: View {
         .buttonStyle(.plain)
         .onHover { isHovering = $0 }
         .help(singleStep == nil
-            ? (isExpanded ? "Hide the details of these steps" : "Show the details of these steps")
-            : "Show this in the inspector")
-        .accessibilityLabel("\(headline), \(steps.count) step\(steps.count == 1 ? "" : "s")")
+            ? L(isExpanded ? "Hide the details of these steps" : "Show the details of these steps")
+            : L("Show this in the inspector"))
+        .accessibilityLabel(String(format: L("%@, %lld steps"), headline, steps.count))
     }
 
     /// The step that opens directly when the run is a single task. A lone call has

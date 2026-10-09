@@ -406,7 +406,7 @@ struct TerminalPane: View {
                     .textSelection(.enabled)
                     .frame(maxWidth: .infinity, alignment: .leading)
             }
-            Button(isExpanded ? "Show less" : "Show all") {
+            Button(L(isExpanded ? "Show less" : "Show all")) {
                 if isExpanded { expandedIds.remove(id) } else { expandedIds.insert(id) }
             }
             .buttonStyle(.link)
@@ -533,7 +533,7 @@ struct TreePane: View {
             HStack(spacing: 8) {
                 Label("Session tree", iconsax: "hierarchy-2")
                     .font(.callout.weight(.semibold))
-                StatusPill(text: "\(count(controller.tree)) entries", tint: .secondary)
+                StatusPill(text: String(format: L("%lld entries"), count(controller.tree)), tint: .secondary)
                 Spacer(minLength: 0)
                 if controller.isLoadingEntries {
                     ProgressView()
@@ -620,7 +620,7 @@ struct TreeNodeRow: View {
                 StatusPill(text: "leaf", tint: .accentColor)
             }
             if node.children.count > 1 {
-                StatusPill(text: "\(node.children.count) branches", tint: .secondary)
+                StatusPill(text: String(format: L("%lld branches"), node.children.count), tint: .secondary)
             }
         }
         .padding(.vertical, 2)
@@ -744,7 +744,7 @@ struct ContextPane: View {
             KeyValueRow(key: "Provider", value: controller.model?.provider ?? "—")
             KeyValueRow(key: "Thinking", value: controller.thinkingLevel ?? "—")
             if let window = controller.model?.contextWindow {
-                KeyValueRow(key: "Context window", value: Format.tokens(window) + " tokens")
+                KeyValueRow(key: "Context window", value: String(format: L("%@ tokens"), Format.tokens(window)))
             }
         }
     }
@@ -937,7 +937,7 @@ struct ContextUsageBar: View {
     private var label: String {
         var parts: [String] = []
         if let tokens = usage.tokens { parts.append(Format.tokens(tokens)) }
-        if let window = usage.contextWindow { parts.append("of " + Format.tokens(window)) }
+        if let window = usage.contextWindow { parts.append(String(format: L("of %@"), Format.tokens(window))) }
         if let percent = usage.percent { parts.append("(\(Int(percent.rounded()))%)") }
         return parts.joined(separator: " ")
     }

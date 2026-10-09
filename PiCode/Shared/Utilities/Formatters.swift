@@ -29,13 +29,13 @@ enum Format {
     static func relativeTime(_ date: Date?, now: Date = Date()) -> String {
         guard let date else { return "" }
         let seconds = now.timeIntervalSince(date)
-        if seconds < 5 { return "now" }
-        if seconds < 60 { return "\(Int(seconds))s ago" }
-        if seconds < 3600 { return "\(Int(seconds / 60))m ago" }
+        if seconds < 5 { return L("now") }
+        if seconds < 60 { return String(format: L("%llds ago"), Int(seconds)) }
+        if seconds < 3600 { return String(format: L("%lldm ago"), Int(seconds / 60)) }
         if Calendar.current.isDateInToday(date) {
             return date.formatted(date: .omitted, time: .shortened)
         }
-        if Calendar.current.isDateInYesterday(date) { return "Yesterday" }
+        if Calendar.current.isDateInYesterday(date) { return L("Yesterday") }
         if seconds < 60 * 60 * 24 * 7 {
             return date.formatted(.dateTime.weekday(.abbreviated))
         }
@@ -74,9 +74,9 @@ enum Format {
     }()
 
     static func dayHeading(_ date: Date?) -> String {
-        guard let date else { return "Unknown" }
-        if Calendar.current.isDateInToday(date) { return "Today" }
-        if Calendar.current.isDateInYesterday(date) { return "Yesterday" }
+        guard let date else { return L("Unknown") }
+        if Calendar.current.isDateInToday(date) { return L("Today") }
+        if Calendar.current.isDateInYesterday(date) { return L("Yesterday") }
         return date.formatted(.dateTime.weekday(.wide).month(.abbreviated).day())
     }
 

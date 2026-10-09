@@ -120,10 +120,10 @@ enum QuietFamily: String, CaseIterable {
     /// decides the noun, so a group holding one command says so.
     func listed(count: Int) -> String {
         switch self {
-        case .command: return count == 1 ? "ran command" : "ran commands"
-        case .edit: return count == 1 ? "edited file" : "edited files"
-        case .read: return count == 1 ? "read file" : "read files"
-        case .thinking: return "thinking"
+        case .command: return count == 1 ? L("ran command") : L("ran commands")
+        case .edit: return count == 1 ? L("edited file") : L("edited files")
+        case .read: return count == 1 ? L("read file") : L("read files")
+        case .thinking: return L("thinking")
         }
     }
 }
@@ -194,7 +194,7 @@ enum TranscriptRow: Identifiable, Equatable {
             if counts[family] == nil { order.append(family) }
             counts[family, default: 0] += 1
         }
-        guard let first = order.first else { return "Actions" }
+        guard let first = order.first else { return L("Actions") }
         if order.count == 1 { return counts[first] == 1 ? first.label : first.pluralLabel }
         return order.enumerated()
             .map { index, family in

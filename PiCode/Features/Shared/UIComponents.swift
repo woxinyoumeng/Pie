@@ -88,10 +88,10 @@ struct BannerView: View {
                 .accessibilityHidden(true)
 
             VStack(alignment: .leading, spacing: 6) {
-                Text(title)
+                Text(L(title))
                     .font(Typography.noticeSemibold)
                 if let message, !message.isEmpty {
-                    Text(message)
+                    Text(L(message))
                         .font(Typography.notice)
                         .foregroundStyle(.secondary)
                         .fixedSize(horizontal: false, vertical: true)
@@ -102,7 +102,7 @@ struct BannerView: View {
             Spacer(minLength: 8)
 
             if let actionTitle, let action {
-                Button(actionTitle, action: action)
+                Button(L(actionTitle), action: action)
                     .buttonStyle(.borderless)
                     .font(Typography.notice)
             }
@@ -146,7 +146,7 @@ struct StatusPill: View {
                 IconsaxIcon(name: systemImage)
                     .imageScale(.small)
             }
-            Text(text)
+            Text(L(text))
                 .font(.caption.weight(isProminent ? .semibold : .regular))
         }
         .foregroundStyle(tint)
@@ -172,10 +172,10 @@ struct ActivityRowView: View {
                 .foregroundStyle(entry.isError ? Color.red : Color.secondary)
                 .padding(.top, 1)
             VStack(alignment: .leading, spacing: 1) {
-                Text(entry.title)
+                Text(L(entry.title))
                     .font(.caption)
                 if let detail = entry.detail {
-                    Text(detail)
+                    Text(L(detail))
                         .font(.caption2)
                         .foregroundStyle(.tertiary)
                         .fixedSize(horizontal: false, vertical: true)
@@ -208,12 +208,12 @@ struct InspectorSection<Content: View>: View {
                         .imageScale(.small)
                         .foregroundStyle(.secondary)
                 }
-                Text(title)
+                Text(L(title))
                     .font(.subheadline.weight(.semibold))
                 Spacer(minLength: 0)
             }
             if let subtitle {
-                Text(subtitle)
+                Text(L(subtitle))
                     .font(.caption)
                     .foregroundStyle(.secondary)
             }
@@ -236,11 +236,11 @@ struct EmptyStateView: View {
             IconsaxIcon(name: systemImage, size: 34)
                 .foregroundStyle(.tertiary)
                 .accessibilityHidden(true)
-            Text(title)
+            Text(L(title))
                 .font(.system(size: 16, weight: .regular))
                 .multilineTextAlignment(.center)
             if let message {
-                Text(message)
+                Text(L(message))
                     .font(.callout)
                     .foregroundStyle(.secondary)
                     .multilineTextAlignment(.center)
@@ -248,7 +248,7 @@ struct EmptyStateView: View {
                     .frame(maxWidth: 380)
             }
             if let actionTitle, let action {
-                Button(actionTitle, action: action)
+                Button(L(actionTitle), action: action)
                     .buttonStyle(.borderedProminent)
                     .padding(.top, 4)
             }
@@ -351,8 +351,8 @@ struct CopyButton: View {
                 .foregroundStyle(.secondary)
         }
         .buttonStyle(.light)
-        .help(help)
-        .accessibilityLabel(help)
+        .help(L(help))
+        .accessibilityLabel(L(help))
     }
 }
 
@@ -390,7 +390,7 @@ struct CollapsibleText: View {
                     withAnimation(.easeInOut(duration: 0.15)) { isExpanded.toggle() }
                 } label: {
                     Label(
-                        isExpanded ? "Show less" : "Show \(lines.count - lineLimit) more lines",
+                        isExpanded ? L("Show less") : String(format: L("Show %lld more lines"), lines.count - lineLimit),
                         iconsax: isExpanded ? "arrow-up-2" : "arrow-down-2"
                     )
                     .font(Typography.body)

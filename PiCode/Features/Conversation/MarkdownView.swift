@@ -197,7 +197,7 @@ struct CodeBlockView: View {
                 StatusPill(text: "streaming", systemImage: "more", tint: .secondary)
             }
             if !isExpanded {
-                Text(lineCount == 1 ? "1 line" : "\(lineCount) lines")
+                Text(lineCount == 1 ? L("1 line") : String(format: L("%lld lines"), lineCount))
                     .font(Typography.body)
                     .foregroundStyle(.tertiary)
             }
@@ -212,8 +212,8 @@ struct CodeBlockView: View {
             }
             .buttonStyle(.light)
             .foregroundStyle(.secondary)
-            .help(isExpanded ? "Hide this code block" : "Show this code block")
-            .accessibilityLabel(isExpanded ? "Hide code" : "Show code")
+            .help(L(isExpanded ? "Hide this code block" : "Show this code block"))
+            .accessibilityLabel(L(isExpanded ? "Hide code" : "Show code"))
 
             CopyButton(text: code, help: "Copy code")
         }

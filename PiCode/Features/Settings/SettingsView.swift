@@ -29,7 +29,11 @@ struct SettingsView: View {
     private var visibleTabs: [SettingsTab] {
         let trimmed = query.trimmingCharacters(in: .whitespaces)
         guard !trimmed.isEmpty else { return SettingsTab.allCases }
-        return SettingsTab.allCases.filter { $0.title.localizedCaseInsensitiveContains(trimmed) }
+        // 标题已本地化,再用英文原名兜底,两种界面语言下都能按习惯搜到。
+        return SettingsTab.allCases.filter {
+            $0.title.localizedCaseInsensitiveContains(trimmed)
+                || $0.rawValue.localizedCaseInsensitiveContains(trimmed)
+        }
     }
 
     private var menu: some View {
@@ -189,9 +193,9 @@ enum SettingsTab: String, CaseIterable, Identifiable, Hashable {
         var id: String { rawValue }
         var title: String {
             switch self {
-            case .personal: return "Personal"
-            case .integrations: return "Integrations"
-            case .coding: return "Coding"
+            case .personal: return L("Personal")
+            case .integrations: return L("Integrations")
+            case .coding: return L("Coding")
             }
         }
     }
@@ -206,12 +210,12 @@ enum SettingsTab: String, CaseIterable, Identifiable, Hashable {
 
     var title: String {
         switch self {
-        case .general: return "General"
-        case .harnesses: return "Harnesses"
-        case .providers: return "Providers"
-        case .composer: return "Composer"
-        case .sessions: return "Sessions"
-        case .pi: return "Diagnostics"
+        case .general: return L("General")
+        case .harnesses: return L("Harnesses")
+        case .providers: return L("Providers")
+        case .composer: return L("Composer")
+        case .sessions: return L("Sessions")
+        case .pi: return L("Diagnostics")
         }
     }
 
@@ -289,7 +293,7 @@ struct GeneralSettings: View {
                 }
                 SettingsRow(
                     "Project folder",
-                    detail: state.selectedProjectPath?.abbreviatingHomeDirectory ?? "No project is selected."
+                    detail: state.selectedProjectPath?.abbreviatingHomeDirectory ?? L("No project is selected.")
                 ) {
                     HStack(spacing: 8) {
                         if let path = state.selectedProjectPath {
@@ -342,7 +346,7 @@ struct ComposerSettings: View {
                     .fixedSize()
                 }
                 if let controller = state.activeController, !controller.availableModels.isEmpty {
-                    SettingsRow("\(controller.harness.displayName) model") {
+                    SettingsRow(String(format: L("%@ model"), controller.harness.displayName)) {
                         Picker("", selection: Binding(
                             get: { state.preferences.defaultModelByHarness[controller.harness.id.rawValue] ?? "" },
                             set: {
@@ -390,7 +394,7 @@ struct SessionSettings: View {
                 }
                 SettingsRow(
                     "Record RPC payloads",
-                    detail: "Keeps the last \(PiDiagnosticsLog.shared.limit) RPC payloads in memory for troubleshooting. Nothing is written to disk."
+                    detail: String(format: L("Keeps the last %lld RPC payloads in memory for troubleshooting. Nothing is written to disk."), PiDiagnosticsLog.shared.limit)
                 ) {
                     Toggle("", isOn: Binding(
                         get: { state.preferences.recordRPCPayloads },
@@ -404,7 +408,7 @@ struct SessionSettings: View {
             SettingsSection("Pi's session storage") {
                 SettingsRow(
                     "Sessions folder",
-                    detail: "\(PiPaths.sessionsDirectory.path.abbreviatingHomeDirectory)\nPiCode indexes these files read-only and never rewrites them."
+                    detail: String(format: L("%@\nPiCode indexes these files read-only and never rewrites them."), PiPaths.sessionsDirectory.path.abbreviatingHomeDirectory)
                 ) {
                     Button("Reveal") { WorkspaceLauncher.reveal(PiPaths.sessionsDirectory.path) }
                         .buttonStyle(.settingsPill)
@@ -414,7 +418,7 @@ struct SessionSettings: View {
             SettingsSection("Hidden and pinned") {
                 SettingsRow(
                     "Hidden sessions",
-                    detail: "\(state.preferences.pinnedSessions.count) pinned sessions, \(state.preferences.hiddenSessions.count) hidden sessions."
+                    detail: String(format: L("%lld pinned sessions, %lld hidden sessions."), state.preferences.pinnedSessions.count, state.preferences.hiddenSessions.count)
                 ) {
                     Button("Forget Hidden Sessions") {
                         state.preferences.hiddenSessions = []
@@ -436,20 +440,20 @@ struct PiSettingsTab: View {
 
     var body: some View {
         SettingsPage {
-            SettingsSection("\(state.activeHarness.displayName) installation") {
+            SettingsSection(String(format: L("%@ installation"), state.activeHarness.displayName)) {
                 if let installation = state.installation {
                     SettingsRow("Version") {
                         Text(installation.version).foregroundStyle(.secondary)
                     }
                     SettingsRow("Path", detail: installation.displayPath)
                 } else {
-                    SettingsRow("Not found", detail: state.discoveryDetail ?? "No harness was found yet.") {
+                    SettingsRow("Not found", detail: state.discoveryDetail ?? L("No harness was found yet.")) {
                         Button("Search Again") { Task { await state.retryDiscovery() } }
                             .buttonStyle(.settingsPill)
                     }
                 }
                 SettingsRow("Version check") {
-                    Button("Check \(state.activeHarness.displayName) Version") { state.run(.checkForPiUpdates) }
+                    Button(String(format: L("Check %@ Version"), state.activeHarness.displayName)) { state.run(.checkForPiUpdates) }
                         .buttonStyle(.settingsPill)
                 }
                 SettingsRow("Setup instructions") {
@@ -492,7 +496,7 @@ struct PiSettingsTab: View {
             }
 
             SettingsSection("Diagnostics") {
-                SettingsRow("Recorded payloads", detail: "\(PiDiagnosticsLog.shared.count) recorded") {
+                SettingsRow("Recorded payloads", detail: String(format: L("%lld recorded"), PiDiagnosticsLog.shared.count)) {
                     HStack(spacing: 8) {
                         Button("View Payload Log") { showsPayloadLog = true }
                             .buttonStyle(.settingsPill)
@@ -529,7 +533,7 @@ struct PayloadLogView: View {
             .padding(12)
             Divider()
             ScrollView {
-                Text(text.isEmpty ? "Nothing recorded. Enable “Record RPC payloads” first." : text)
+                Text(text.isEmpty ? L("Nothing recorded. Enable “Record RPC payloads” first.") : text)
                     .font(.system(.caption, design: .monospaced))
                     .textSelection(.enabled)
                     .frame(maxWidth: .infinity, alignment: .leading)

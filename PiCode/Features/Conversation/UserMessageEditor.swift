@@ -26,7 +26,7 @@ struct UserMessageEditor: View {
                 Spacer()
                 Button("Cancel", action: onCancel)
                     .disabled(isSending)
-                Button(isSending ? "Sending…" : "Send") {
+                Button(isSending ? L("Sending…") : L("Send")) {
                     isSending = true
                     error = nil
                     Task {

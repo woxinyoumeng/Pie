@@ -22,7 +22,7 @@ enum LocalHarnessAccountService {
         default:
             return LocalHarnessAccountStatus(
                 kind: .unavailable,
-                title: "Managed by \(descriptor.displayName)",
+                title: String(format: L("Managed by %@"), descriptor.displayName),
                 detail: L("This harness does not expose a local account-status command.")
             )
         }
@@ -55,7 +55,7 @@ enum LocalHarnessAccountService {
                 kind: .signedOut,
                 title: L("Not signed in"),
                 detail: result.stderr.trimmingCharacters(in: .whitespacesAndNewlines)
-                    .nonEmpty ?? "Sign in with \(descriptor.displayName) to use a local subscription."
+                    .nonEmpty ?? String(format: L("Sign in with %@ to use a local subscription."), descriptor.displayName)
             )
         }
 

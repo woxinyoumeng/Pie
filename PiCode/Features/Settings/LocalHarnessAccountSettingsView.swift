@@ -29,13 +29,13 @@ struct LocalHarnessAccountSettingsView: View {
                 }
             }
 
-            Text(status?.detail ?? "Checking the account owned by \(descriptor.displayName)…")
+            Text(status?.detail ?? String(format: L("Checking the account owned by %@…"), descriptor.displayName))
                 .font(.caption)
                 .foregroundStyle(.secondary)
                 .textSelection(.enabled)
 
             HStack(spacing: 8) {
-                Button(status?.kind == .signedOut ? "Sign In…" : "Manage Account…") {
+                Button(L(status?.kind == .signedOut ? "Sign In…" : "Manage Account…")) {
                     let command = LocalHarnessAccountService.loginCommand(for: descriptor.id)
                     _ = WorkspaceLauncher.openTerminal(at: NSHomeDirectory())
                     state.showToast("Run `\(command)` in the terminal.")
@@ -44,7 +44,7 @@ struct LocalHarnessAccountSettingsView: View {
 
                 CopyButton(
                     text: LocalHarnessAccountService.loginCommand(for: descriptor.id),
-                    help: "Copy the \(descriptor.displayName) sign-in command"
+                    help: String(format: L("Copy the %@ sign-in command"), descriptor.displayName)
                 )
 
                 Button("Refresh") { Task { await reload() } }
@@ -69,7 +69,7 @@ struct LocalHarnessAccountSettingsView: View {
             status = LocalHarnessAccountStatus(
                 kind: .unavailable,
                 title: "Not installed",
-                detail: "Install \(descriptor.displayName) before connecting an account."
+                detail: String(format: L("Install %@ before connecting an account."), descriptor.displayName)
             )
             return
         }

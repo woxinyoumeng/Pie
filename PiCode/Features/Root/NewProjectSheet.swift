@@ -91,7 +91,7 @@ struct NewProjectSheet: View {
                     }
                 } else if selectedDescriptor?.capabilities.contains(.modelCatalog) == true {
                     Section("Provider and model") {
-                        Text("\(selectedDescriptor?.displayName ?? "This harness") owns its provider configuration and model catalog. Start the chat, then choose one of the models it reports in the composer.")
+                        Text("\(selectedDescriptor?.displayName ?? L("This harness")) owns its provider configuration and model catalog. Start the chat, then choose one of the models it reports in the composer.")
                             .font(.caption)
                             .foregroundStyle(.secondary)
                     }
